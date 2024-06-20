@@ -7,18 +7,23 @@ import hist
 from cycler import cycler
 
 
-filename = "jpsik.root"
+filename = "task2/jpsik.root"
 workspace_name = "wspace"
 dataset_name = "rds_data"
 
 #! THE TOTAL MUST BE THE FIRST
-pdf_names = ["model", "pdf_comb", "sig_g1", "sig_g2", "pdf_sig", "pdf_jpsix"]
+pdf_names = ["model","pdf_comb", "sig_g1", "sig_g2", "pdf_sig", "pdf_jpsix"]
 labels = ["Total", "Combinatorial", "Gauss1", "Gauss2", "GaussSum", "ErrorFunc"]
 hist_range = (5, 5.8)
 
+
+#filename="task2/norm_wspace.root"
+#pdf_names=[""]
+#labels=[""]
+
 #!MUST BE EQUAL TO THE ONE SETTED IN THE FITTING SCRIPT
 bins = 100
-
+x_sampling=400
 
 acab_palette = (
     "#1f77b4",
@@ -76,17 +81,16 @@ data = workspace.data(dataset_name)
 
 
 np_data = data.to_numpy()
-np_data["m"]
 
-x = np.linspace(*hist_range, bins)
+x = np.linspace(*hist_range, x_sampling)
 h = hist.Hist(hist.axis.Regular(bins, *hist_range), storage=hist.storage.Weight())
 h.fill(np_data["m"], weight=np_data["wgt"])
-
 
 fig, ax = plt.subplots(2, 1, gridspec_kw={"height_ratios": [3, 1]}, sharex=True)
 plt.subplots_adjust(hspace=0)
 h.plot(histtype="errorbar", color="black", ax=ax[0], linewidth=2, label="Data")
 
+#! Fight the garbage collector with his own weapons
 observables = []
 frames = []
 models = []
@@ -102,7 +106,7 @@ for pdf_name, label in zip(pdf_names, labels):
     ax[0].plot(x, pdfs[-1], label=label)
 
 ax[0].set_xlim(*hist_range)
-residuals = h.values() - pdfs[0]
+residuals = h.values() - pdf(h.axes[0].centers, frames[0], data, models[0])
 ax[1].errorbar(h.axes[0].centers, residuals, fmt="o", yerr=np.sqrt(h.variances()))
 ax[1].axhline(0, color="red", linestyle="--")
 ax[1].set_xlim(*hist_range)
