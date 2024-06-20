@@ -158,9 +158,12 @@ void task_4_2(unsigned int cate = 0)
     draw(wspace, cate);
 
     // save RooFit workspace
-    TFile *fout = new TFile("wspace_4_2.root","RECREATE");
+
+    string wp_name="wspace_semileptonic_bkg_"+ to_string(cate) +".root";
+    TFile *fout = new TFile(wp_name.c_str(),"RECREATE");
     wspace->Write();
     fout->Close();
+
 
     return;
 
