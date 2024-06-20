@@ -4,7 +4,7 @@ void task_4_1()
 {
   gROOT->SetBatch();
   unsigned int cate = 0;
-    double bdt_min = 0.7;
+    double bdt_min = 0.8;
 
     vector<TString> decay;
     vector<double> yield, yield_err;
