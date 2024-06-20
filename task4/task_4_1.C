@@ -148,15 +148,15 @@ void draw(RooWorkspace* wspace, unsigned int cate = 0){
     canvas->Print("task_4_1.png");
 }
 
-void task_4_1()
+void task_4_1(unsigned int cate=0)
 {
     gROOT->SetBatch();
 
     RooWorkspace *wspace = new RooWorkspace("wspace","wspace");
 
-    fill_dataset(wspace, 0);
-    fit(wspace, 0);
-    draw(wspace, 0);
+    fill_dataset(wspace, cate);
+    fit(wspace, cate);
+    draw(wspace, cate);
 
     // save RooFit workspace
     TFile *fout = new TFile("wspace.root","RECREATE");
