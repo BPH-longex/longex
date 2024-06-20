@@ -7,14 +7,16 @@ def read_data(data_in, tree_name, variables):
     # Extract the necessary variables from the list
     m = None
     wgt = None
+    cate = None
     for var in variables:
         if var.GetName() == "m":
             m = var
         elif var.GetName() == "wgt":
             wgt = var
-
-    if m is None or wgt is None:
-        raise ValueError("The list of RooRealVar must include 'm' and 'wgt' variables.")
+        elif var.GetName() == "cate";
+            cate = var
+    if m is None or wgt is None or cate is None:
+        raise ValueError("The list of RooRealVar must include 'm' and 'wgt' and 'cate' variables.")
  
 
 
@@ -22,15 +24,8 @@ def read_data(data_in, tree_name, variables):
     fin = TFile(data_in)
     tin = fin.Get(tree_name)
 
-    cate_t = ROOT.std.vector('unsigned int')()
-    wgt_t = ROOT.std.vector('float')()
-    m_t = ROOT.std.vector('float')()
-
-    tin.SetBranchAddress("cate", cate_t)
-    tin.SetBranchAddress("wgt", wgt_t)
-    tin.SetBranchAddress("m", m_t)
-
-    rds_data = RooDataSet("rds_data", "", RooArgSet(m, wgt), RooFit.WeightVar(wgt), "cate==0 && m > 5.0 && <= 5.8")
+    rds_data = RooDataSet("rds_data", "", RooArgSet(m, wgt), RooFit.Import(tin), RooFit.WeightVar(wgt))
+    rds_data.reduce("cate==0 && m > 5.0 && m <= 5.8")
 
     fin.Close()
     return rds_data

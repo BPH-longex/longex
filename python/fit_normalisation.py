@@ -20,19 +20,19 @@ def parse_arguments():
 def fit(data_in, tree_name, mc, output_path):
     # Define the variables
     m = RooRealVar("m", "m", 5.0, 5.8)
-
+    cate = RooRealVar("cate","",-1,20)
+    variables = [m, cate]
+ 
     if not mc: 
        wgt = RooRealVar("wgt", "wgt", 1.0, 0.0, 1000.0)
-       variables = [m, wgt]
+       variables.append(wgt)
        model = pdf_norm_data(m)
        rds = read_data(data_in, tree_name, variables)
 
     if mc:
-       cate = RooRealVar("cate","",-1,20)
-       variables = [m, cate]
        model = pdf_norm_sig(m)
        rds = read_mc(data_in, tree_name, variables)
-     
+    print(rds.Print("v"))
     # Fit the model to the data
     fit_result = model.fitTo(rds, RooFit.Extended(True), RooFit.SumW2Error(True))
 
