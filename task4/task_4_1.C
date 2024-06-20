@@ -87,7 +87,9 @@ void fit(RooWorkspace* wspace, unsigned int cate = 0){
 
     RooNDKeysPdf pdf("pdf", "", m, *rds,  "a");
 
-    pdf.fitTo(*rds, Save(true), SumW2Error(true));
+
+    //pdf.fitTo(*rds, Save(true), SumW2Error(true));
+
 
     // wspace->import(res);
     wspace->import(pdf);
@@ -144,8 +146,10 @@ void draw(RooWorkspace* wspace, unsigned int cate = 0){
     pullHist->GetYaxis()->SetLabelSize(0.035);
     frame_pull->Draw();
 
-    canvas->Print("task_4_1.pdf");
-    canvas->Print("task_4_1.png");
+    string pdf_name="task_4_1_"+ to_string(cate) +".pdf";
+    string png_name="task_4_1_"+ to_string(cate) +".png";
+    canvas->Print(pdf_name.c_str());
+    canvas->Print(png_name.c_str());
 }
 
 void task_4_1(unsigned int cate=0)
@@ -159,7 +163,8 @@ void task_4_1(unsigned int cate=0)
     draw(wspace, cate);
 
     // save RooFit workspace
-    TFile *fout = new TFile("wspace.root","RECREATE");
+    string wp_name="wspace"+ to_string(cate) +".root";
+    TFile *fout = new TFile(wp_name.c_str(),"RECREATE");
     wspace->Write();
     fout->Close();
 }
