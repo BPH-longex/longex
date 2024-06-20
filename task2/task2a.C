@@ -28,7 +28,7 @@
     RooPlot *frame = m.frame();
     rds_mc->plotOn(frame, Name("rds_mc"));
     pdf_sig.plotOn(frame, Name("sig_g1"), Components(RooArgList(sig_g1)), LineColor(kRed));
-    pdf_sig.plotOn(frame, Name("sig_g2"), Components(RooArgList(sig_g1)), LineColor(kGreen));
+    pdf_sig.plotOn(frame, Name("sig_g2"), Components(RooArgList(sig_g2)), LineColor(kGreen));
     pdf_sig.plotOn(frame);
 
     TCanvas* canvas = new TCanvas("canvas", "", 600, 600);
@@ -39,7 +39,7 @@
     frame->Draw();
 
     canvas->cd(2);
-    RooHist* residHist = frame -> pullHist();
+    RooHist* residHist = frame->pullHist();
     RooPlot *frame_resid = m.frame();
     frame_resid->addPlotable(residHist, "P");
   
