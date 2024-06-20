@@ -118,7 +118,7 @@
 
     model.fitTo(*rds_data, Extended(true), SumW2Error(true));
 
-    RooWorkspace wspace("wspace","wspace");
+    RooWorkspace wspace("wspace`:", "wspace");
     //wspace.import(*rds_data, model, comb_coeff, pdf_comb, sig_g1, sig_g2, pdf_sig,n_jpsix, n_comb, n_sig);
     wspace.import(*rds_data);
     wspace.import(model);
