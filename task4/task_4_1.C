@@ -4,7 +4,7 @@ void task_4_1()
 {
   gROOT->SetBatch();
   unsigned int cate = 0;
-    double bdt_min = 0.8;
+    double bdt_min = 0.7;
 
     vector<TString> decay;
     vector<double> yield, yield_err;
@@ -12,7 +12,7 @@ void task_4_1()
     TString input_path = "/eos/user/c/cmsdas/2024/long-ex-bph/";
 
     // B0 -> mu mu
-    xdecay.push_back("bdmmMc");
+    decay.push_back("bdmmMc");
     yield.push_back(effyield[cate][N_bdmmMc]);
     yield_err.push_back(effyield[cate][dN_bdmmMc]);
 
@@ -74,7 +74,7 @@ void task_4_1()
 
     RooNDKeysPdf pdf("pdf", "", m, *rds,  "a");
 
-    RooPlot *frame = m.frame(Title(" "),Bins(100));
+    RooPlot *frame = m.frame(Title(" "),Bins(70));
     rds->plotOn(frame, Name("t_rds"));
     pdf.plotOn(frame, Name("t_pdf"), LineWidth(3));
 
@@ -102,7 +102,7 @@ void task_4_1()
     canvas->cd(2);
 
     // Create a RooHist object to plot the ratio between fit and data
-    RooHist* pullHist = frame->pullHist();
+    RooHist* pullHist = frame->residHist();
     RooPlot* frame_pull = m.frame();
     frame_pull->addPlotable(pullHist,"P");
     pullHist->SetMarkerStyle(20);
