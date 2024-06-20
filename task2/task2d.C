@@ -118,6 +118,23 @@
 
     model.fitTo(*rds_data, Extended(true), SumW2Error(true));
 
+    RooWorkspace wspace("wspace","wspace");
+    //wspace.import(*rds_data, model, comb_coeff, pdf_comb, sig_g1, sig_g2, pdf_sig,n_jpsix, n_comb, n_sig);
+    wspace.import(*rds_data);
+    wspace.import(model);
+    wspace.import(comb_coeff);
+    wspace.import(pdf_comb);
+    wspace.import(sig_g1);
+    wspace.import(sig_g2);
+    wspace.import(pdf_sig);
+    wspace.import(n_jpsix);
+    wspace.import(n_comb);
+    wspace.import(n_sig);
+
+    TFile *fout = new TFile("jpsik.root","RECREATE");
+    wspace.Write();
+    fout->Close();
+
     // --- draw data and fit --- //
     RooPlot *frame_data = m.frame();
     rds_data->plotOn(frame_data, Name("rds_data"));
@@ -133,7 +150,7 @@
     canvas_data->cd(1);
     frame_data->Draw();
 
-    // Drwaing the pull below
+    // Drawing the pull below
     canvas_data->cd(2);
     RooHist* residHist_data = frame_data->pullHist();
     RooPlot *frame_data_resid = m.frame();

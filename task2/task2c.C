@@ -69,7 +69,7 @@
     model.fitTo(*rds_data, Extended(true), SumW2Error(true));
 
     RooPlot *frame = m.frame();
-    rds_data->plotOn(frame, Name("rds_mc"));
+    rds_data->plotOn(frame, Name("rds_data"));
     //pdf_sig.plotOn(frame, Name("sig_g1"), Components(RooArgList(sig_g1)), LineColor(kRed));
     model.plotOn(frame, Name("pdf_comb"), Components(RooArgList(pdf_comb)), LineColor(kGreen));
     model.plotOn(frame, Name("pdf_sig"), Components(RooArgList(pdf_sig)), LineColor(kRed));
