@@ -1,9 +1,8 @@
 #include "common.h"
 
-void task_4_1()
-{
-  gROOT->SetBatch();
-  unsigned int cate = 0;
+using namespace RooFit;
+
+void fill_dataset(RooWorkspace* wspace, unsigned int cate = 0){
     double bdt_min = 0.8;
 
     vector<TString> decay;
@@ -54,28 +53,55 @@ void task_4_1()
         tin->SetBranchAddress("bdt",&bdt_t);
 
         double weight = yield[proc]/(double)tin->GetEntries(Form("cate==%d",cate));
-	double weight_err = yield_err[proc]/(double)tin->GetEntries(Form("cate==%d",cate))/weight_max;
+	    double weight_err = yield_err[proc]/(double)tin->GetEntries(Form("cate==%d",cate))/weight_max;
 
-	std::cout<<"weight "<<weight<<" weight_err"<<weight_err<<std::endl;
+	    std::cout<<"weight "<<weight<<" weight_err"<<weight_err<<std::endl;
 
         for(int evt=0; evt<tin->GetEntries(); evt++) {
             tin->GetEntry(evt);
             if (cate_t!=cate) continue;
             if (bdt_t<=bdt_min) continue;
             m.setVal(m_t);
-	    wgt.setVal(weight/weight_max); // rescale the event with largest weight to be 1
-            rds->add(RooArgSet(m,wgt),weight/weight_max);
+	        wgt.setVal(weight/weight_max); // rescale the event with largest weight to be 1
+            rds->add(RooArgSet(m,wgt), weight/weight_max);
 
             sum_weight += weight;
             sum_weight_err += weight_err; // systematics; linear sum
         }
+
         delete fin;
     }
 
+    cout << "Category: " << cate << endl;
+    cout << "BDT min: " << bdt_min << endl;
+    cout << "Sum of weights: " << sum_weight << " +- " << sum_weight_err << endl;
+
+    wspace->import(m);
+    wspace->import(*rds);
+}
+
+void fit(RooWorkspace* wspace, unsigned int cate = 0){
+
+    RooDataSet *rds = (RooDataSet*)wspace->data("rds");
+    RooRealVar m = *(RooRealVar*)wspace->var("m");
+
     RooNDKeysPdf pdf("pdf", "", m, *rds,  "a");
 
-    RooPlot *frame = m.frame(Title(" "),Bins(70));
-    rds->plotOn(frame, Name("t_rds"));
+    pdf.fitTo(*rds, Save(true), SumW2Error(true));
+
+    // wspace->import(res);
+    wspace->import(pdf);
+}
+
+void draw(RooWorkspace* wspace, unsigned int cate = 0){
+
+    // reload workspace
+    RooDataSet *rds = (RooDataSet*)wspace->data("rds");
+    RooRealVar m = *(RooRealVar*)wspace->var("m");
+    RooNDKeysPdf pdf = *(RooNDKeysPdf*)wspace->pdf("pdf");
+
+    RooPlot *frame = m.frame(Title(" "), Bins(70));
+    rds->plotOn(frame, Name("t_rds"), MarkerSize(0.8));
     pdf.plotOn(frame, Name("t_pdf"), LineWidth(3));
 
     TCanvas* canvas = new TCanvas("canvas", "", 600, 600);
@@ -118,12 +144,22 @@ void task_4_1()
     pullHist->GetYaxis()->SetLabelSize(0.035);
     frame_pull->Draw();
 
-
-
     canvas->Print("task_4_1.pdf");
     canvas->Print("task_4_1.png");
+}
 
-    cout << "Category: " << cate << endl;
-    cout << "BDT min: " << bdt_min << endl;
-    cout << "Sum of weights: " << sum_weight << " +- " << sum_weight_err << endl;
+void task_4_1()
+{
+    gROOT->SetBatch();
+
+    RooWorkspace *wspace = new RooWorkspace("wspace","wspace");
+
+    fill_dataset(wspace, 0);
+    fit(wspace, 0);
+    draw(wspace, 0);
+
+    // save RooFit workspace
+    TFile *fout = new TFile("wspace.root","RECREATE");
+    wspace->Write();
+    fout->Close();
 }
