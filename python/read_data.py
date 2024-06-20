@@ -30,18 +30,7 @@ def read_data(data_in, tree_name, variables):
     tin.SetBranchAddress("wgt", wgt_t)
     tin.SetBranchAddress("m", m_t)
 
-    rds_data = RooDataSet("rds_data", "", RooArgSet(m, wgt), RooFit.WeightVar(wgt))
-
-
-    for evt in range(tin.GetEntries()):
-        tin.GetEntry(evt)
-        if cate_t[0] != 0:
-            continue
-        if m_t[0] < 5.0 or m_t[0] >= 5.8:
-            continue
-        m.setVal(m_t[0])
-        wgt.setVal(wgt_t[0])
-        rds_data.add(RooArgSet(m, wgt), wgt_t[0])
+    rds_data = RooDataSet("rds_data", "", RooArgSet(m, wgt), RooFit.WeightVar(wgt), "cate==0 && m > 5.0 && <= 5.8")
 
     fin.Close()
     return rds_data

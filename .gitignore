@@ -1,2 +1,4 @@
 */root_files/*
-try
+*__pycache__*
+*.swp
+
