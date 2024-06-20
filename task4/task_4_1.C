@@ -12,7 +12,7 @@ void task_4_1()
     TString input_path = "/eos/user/c/cmsdas/2024/long-ex-bph/";
 
     // B0 -> mu mu
-    decay.push_back("bdmmMc");
+    xdecay.push_back("bdmmMc");
     yield.push_back(effyield[cate][N_bdmmMc]);
     yield_err.push_back(effyield[cate][dN_bdmmMc]);
 
@@ -72,13 +72,15 @@ void task_4_1()
         delete fin;
     }
 
-    RooKeysPdf pdf("pdf", "", m, *rds,  RooKeysPdf::NoMirror, 2.0);
+    RooNDKeysPdf pdf("pdf", "", m, *rds,  "a");
 
     RooPlot *frame = m.frame(Title(" "),Bins(100));
     rds->plotOn(frame, Name("t_rds"));
     pdf.plotOn(frame, Name("t_pdf"), LineWidth(3));
 
     TCanvas* canvas = new TCanvas("canvas", "", 600, 600);
+    canvas->Divide(1,2);
+    canvas->cd(1);
     canvas->SetMargin(0.15,0.06,0.13,0.07);
 
     frame->GetYaxis()->SetTitleOffset(1.50);
@@ -97,6 +99,26 @@ void task_4_1()
     leg->AddEntry(frame->findObject("t_rds"),"Simluation","EP");
     leg->AddEntry(frame->findObject("t_pdf"),"PDF","L");
     leg->Draw();
+    canvas->cd(2);
+
+    // Create a RooHist object to plot the ratio between fit and data
+    RooHist* pullHist = frame->pullHist();
+    RooPlot* frame_pull = m.frame();
+    frame_pull->addPlotable(pullHist,"P");
+    pullHist->SetMarkerStyle(20);
+    pullHist->SetMarkerSize(0.8);
+    pullHist->SetLineWidth(1);
+    pullHist->SetLineColor(kBlack);
+    pullHist->GetXaxis()->SetTitle("M(#mu#mu) [GeV]");
+    pullHist->GetYaxis()->SetTitle("Pull");
+    pullHist->GetYaxis()->SetTitleOffset(0.5);
+    pullHist->GetYaxis()->SetTitleSize(0.043);
+    pullHist->GetXaxis()->SetTitleSize(0.043);
+    pullHist->GetXaxis()->SetLabelSize(0.035);
+    pullHist->GetYaxis()->SetLabelSize(0.035);
+    frame_pull->Draw();
+
+
 
     canvas->Print("task_4_1.pdf");
     canvas->Print("task_4_1.png");
