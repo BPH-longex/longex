@@ -127,13 +127,15 @@ namespace norm_pdf {
         RooGaussian sig_g2("sig_g2", "", m, sig_mean2, sig_sigma2);
         RooAddPdf pdf_sig("pdf_sig", "", RooArgList(sig_g1,sig_g2), RooArgList(sig_frac));
 */
+        sigmc_mean.setConstant(true);
+        sigmc_sigma.setConstant(true);
         RooAddition sig_mean("sig_mean", "", RooArgList(sigmc_mean, sig_shift));
-        RooAddition sig_sigma("sig_sigma", "", RooArgList(sigmc_sigma, sig_scale));
-        RooRealVar sig_alpha1("sig_alpha1", "", 1.5, 0.1, 10);
-        RooRealVar sig_n1("sig_n1", "", 2, 0.1, 10);
-        RooRealVar sig_alpha2("sig_alpha2", "", 1.5, 0.1, 10);
-        RooRealVar sig_n2("sig_n2", "", 2, 0.1, 10);
-        RooCrystalBall pdf_sig("pdf_sig", "", m, sig_mean, sig_sigma, sig_alpha1, sig_n1, sig_alpha2, sig_n2);
+        RooProduct sig_sigma("sig_sigma", "", RooArgList(sigmc_sigma, sig_scale));
+        sigmc_alpha1.setConstant(true);
+        sigmc_n1.setConstant(true);
+        sigmc_alpha2.setConstant(true);
+        sigmc_n2.setConstant(true);
+        RooCrystalBall pdf_sig("pdf_sig", "", m, sig_mean, sig_sigma, sigmc_alpha1, sigmc_n1, sigmc_alpha2, sigmc_n2);
 
         RooRealVar comb_coeff("comb_coeff", "", -1.2, -10., 10.);
         RooExponential pdf_comb("pdf_comb", "", m, comb_coeff);
@@ -142,9 +144,9 @@ namespace norm_pdf {
         RooRealVar jpsix_shift("jpsix_shift", "", 5.13, 5.12, 5.16);
         RooGenericPdf pdf_jpsix("pdf_jpsix", "", "TMath::Erfc((@0-@1)/@2)", RooArgList(m,jpsix_shift, jpsix_scale));
 
-        RooRealVar n_sig("n_sig","", 100000, 0., 1E8);
-        RooRealVar n_comb("n_comb", "", 80000, 0., 1E6);
-        RooRealVar n_jpsix("n_jpsix", "", 20000, 0., 1E5);
+        RooRealVar n_sig("n_sig","", 0.5*(rds_data->sumEntries()), 0., 1E8);
+        RooRealVar n_comb("n_comb", "", 0.4*(rds_data->sumEntries()), 0., 1E6);
+        RooRealVar n_jpsix("n_jpsix", "", 0.1*(rds_data->sumEntries()), 0., 1E5);
         RooAddPdf model("model", "", RooArgList(pdf_sig, pdf_comb, pdf_jpsix), RooArgList(n_sig, n_comb, n_jpsix));
 
         model.fitTo(*rds_data, Extended(true), SumW2Error(true));
