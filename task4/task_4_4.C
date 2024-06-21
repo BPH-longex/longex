@@ -52,7 +52,9 @@ namespace norm_pdf {
         for(int evt=0; evt<tin->GetEntries(); evt++) {
             tin->GetEntry(evt);
             if (cate_t!=cate) continue;
+            evtcount[0]++;
             if (m_t<5.0 || m_t>=5.8) continue;
+            evtcount[1]++;
             m.setVal(m_t);
             rds_mc->add(RooArgSet(m));
         }
