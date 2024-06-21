@@ -20,10 +20,29 @@ void build_pdf_signal(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8)
     signal_pdf::fit(wspace, cate, bdt_min);
 }
 
-void build_pdf_norm(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8){
+void build_pdf_norm(RooWorkspace* wspace, uint cate = 0){
     norm_pdf::fill_dataset_data(wspace, cate, bdt_min);
     norm_pdf::fill_dataset_mc(wspace, cate, bdt_min);
     norm_pdf::fit(wspace, cate, bdt_min);
+}
+
+void build_pdf_comb(RooWorkspace *wspace, int cate, double bdt_min)
+{
+    RooRealVar m("m","",4.9,5.9);
+
+    RooRealVar comb_B1(Form("comb_B1_%d",cate), "", 0.5, 0. , 1);
+    RooFormulaVar comb_B2(Form("comb_B2_%d",cate), "", "1.-@0", RooArgList(comb_B1));
+    RooBernstein pdf(Form("pdf_comb_%d",cate), "", m, RooArgList(comb_B1, comb_B2));
+    
+    TFile *fin = new TFile("/eos/user/c/cmsdas/2024/long-ex-bph/bmmData-blind.root");
+    TTree *tin = (TTree*)fin->Get("bmmData");
+    
+    double n_comb_guess = (double)tin->GetEntries(Form("cate==%d&&bdt>%g&&m>5.45", cate, bdt_min));
+    n_comb_guess *= 1.0/0.45; // scale to full mass region
+    delete fin;
+ 
+    wspace->import(pdf);
+    wspace->import(RooRealVar(Form("n_comb_%d",cate),"",n_comb_guess,0.,n_comb_guess*10.));
 }
 
 void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
@@ -36,9 +55,9 @@ void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
     // build_pdf_peak(wspace, cate, bdt_min);
     build_pdf_semi(wspace, cate, bdt_min);
     build_pdf_signal(wspace, cate, bdt_min);
-    // build_pdf_norm(wspace, cate, bdt_min);
+    build_pdf_norm(wspace, cate, bdt_min);
+    build_pdf_comb(wspace, cate, bdt_min);
 
     // save workspace
     wspace->writeToFile("task_4_5.root");
-
 }
