@@ -51,7 +51,7 @@ func = lambda x: np.arctanh(x)
 def significance(ns,nb):
     return np.sqrt(2*((ns+nb)*np.log(1+ns/nb)-ns))
 
-
+best_cut = []
 for cat in range(8):
     fig, ax = plt.subplots(2, 1, gridspec_kw={"height_ratios": [3, 1]}, sharex=True)
     plt.subplots_adjust(hspace=0)
@@ -60,14 +60,15 @@ for cat in range(8):
 
     bkg_weight=np.ones(len(bkg[bkg.cate==cat]))*0.25/0.45
 
-    ax[0].hist(func(signal[signal["cate"]==cat]["bdt"]),bins=bins,weights=sig_weight,histtype="step",color="red", label="Signal",hatch="/")
+    ax[0].hist(func(signal[signal["cate"]==cat]["bdt"]),bins=bins,range=(0,5),weights=sig_weight,histtype="step",color="red", label="Signal",hatch="/")
 
-    ax[0].hist(func(bkg[bkg["cate"]==cat]["bdt"]),bins=bins,weights=bkg_weight,histtype="stepfilled",color="dodgerblue",label="Background")
+    ax[0].hist(func(bkg[bkg["cate"]==cat]["bdt"]),bins=bins,range=(0,5),weights=bkg_weight,histtype="stepfilled",color="dodgerblue",label="Background")
 
     sig_h=hist.Hist(hist.axis.Regular(bins, 0,5, name="atanh(BDT)"))
     bkg_h=hist.Hist(hist.axis.Regular(bins, 0,5, name="atanh(BDT)"))
 
     sig_h.fill(func(signal[signal["cate"]==cat]["bdt"]),weight=sig_weight)
+
     bkg_h.fill(func(bkg[bkg["cate"]==cat]["bdt"]),weight=bkg_weight)
     cuts=sig_h.axes[0].edges[:-1]
     n_sig_arr=np.array([sig_h.integrate(0,hist.loc(cut),hist.loc(5)) for cut in cuts])
@@ -89,6 +90,7 @@ for cat in range(8):
     z[z>1e100]=0
     maxidx=np.argmax(z)
     maxcut=cuts[maxidx]
+    best_cut.append(maxcut)
     ax[1].axvline(maxcut,linestyle="--",color="royalblue",label=f"BDT={np.tanh(maxcut):.4f}")
 
     ax[1].set_ylabel("Z")
@@ -96,4 +98,10 @@ for cat in range(8):
     ax[1].set_xlabel("atanh(BDT)")
     ax[1].set_xlim(-0.2,5)
     ax[0].set_xlim(-0.2,5)
+    ax[0].set_ylim(2e-2,1e4)
     fig.savefig(f"fig/bdt_cat{cat}.pdf")
+
+
+# %%
+for idx,cut in enumerate(best_cut):
+    print(f"Cat:{idx} Score:{np.tanh(cut):4f}")
