@@ -3,7 +3,7 @@ from ROOT import RooFit, RooDataSet, RooArgSet, RooRealVar, RooArgList
 import ROOT
 
 
-def read_data(data_in, tree_name, variables, ws):
+def read_data(data_in, tree_name, variables, ws, cat):
     # Extract the necessary variables from the list
     m = None
     wgt = None
@@ -26,13 +26,13 @@ def read_data(data_in, tree_name, variables, ws):
 
     rds_data = RooDataSet("rds_data", "", RooArgSet(m, wgt, cate), RooFit.Import(tin), RooFit.WeightVar(wgt))
     cate_t = 0
-    rds_data.reduce("m >= 5.0 && m <= 5.8 && cate==0")
+    rds_data.reduce(f"m >= 5.0 && m <= 5.8 && cate=={cat}")
 
     fin.Close()
     getattr(ws, 'import')(rds_data)
 
 
-def read_mc(data_in, tree_name, variables, ws):
+def read_mc(data_in, tree_name, variables, ws, cat):
     m = None
     cate = None
     me  = None
@@ -54,7 +54,7 @@ def read_mc(data_in, tree_name, variables, ws):
 
     rds_mc   = RooDataSet("rds_data", "rds_data", RooArgSet(cate, m, me), RooFit.Import(tin))
 
-    rds_mc = rds_mc.reduce("m >= 5.0 && m <= 5.8 && cate==0")
+    rds_mc = rds_mc.reduce(f"m >= 5.0 && m <= 5.8 && cate=={cat}")
     fin.Close()
     getattr(ws, 'import')(rds_mc)
 
