@@ -83,14 +83,33 @@ namespace norm_pdf {
         RooDataSet *rds_mc = (RooDataSet*)wspace->data("rds_mc");
         RooDataSet *rds_data = (RooDataSet*)wspace->data("rds_data");
 
-        RooRealVar sigmc_mean1("sigmc_mean1","",5.28,5.2,5.4);
+        /*
+        mean = RooRealVar("sig_mean", "", 5.28, 5.2, 5.4)
+        sigma = RooRealVar("sig_sigma", "width", 0.030, 0.005, 0.060)
+        alpha1 = RooRealVar("alpha1", "alpha1", 1.5, 0.1, 10)
+        n1 = RooRealVar("n1", "n1", 2, 0.1, 10)
+        alpha2 = RooRealVar("alpha2", "alpha2", 1.5, 0.1, 10)
+        n2 = RooRealVar("n2", "n2", 2, 0.1, 10)
+        pdf_sig = RooCrystalBall("pdf_sig", "", m, mean, sigma, alpha1, n1, alpha2, n2)
+         * */
+
+        RooRealVar sigmc_mean("sigmc_mean", "sigmc_mean", 5.28, 5.2, 5.4);
+        RooRealVar sigmc_sigma("sigmc_sigma", "sigmc_width", 0.030, 0.005, 0.060);
+        RooRealVar sigmc_alpha1("sigmc_alpha1", "sigmc_alpha1", 1.5, 0.1, 10);
+        RooRealVar sigmc_n1("sigmc_n1", "sigmc_n1", 2, 0.1, 10);
+        RooRealVar sigmc_alpha2("sigmc_alpha2", "sigmc_alpha2", 1.5, 0.1, 10);
+        RooRealVar sigmc_n2("sigmc_n2", "sigmc_n2", 2, 0.1, 10);
+        RooCrystalBall pdf_sigmc("pdf_sigmc", "", m, sigmc_mean, sigmc_sigma, sigmc_alpha1, sigmc_n1, sigmc_alpha2, sigmc_n2);
+
+        /*RooRealVar sigmc_mean1("sigmc_mean1","",5.28,5.2,5.4);
         RooRealVar sigmc_mean2("sigmc_mean2","",5.28,5.2,5.4);
         RooRealVar sigmc_sigma1("sigmc_sigma1","",0.030,0.005,0.060);
         RooRealVar sigmc_sigma2("sigmc_sigma2","",0.080,0.040,0.200);
         RooRealVar sig_frac("sig_frac","",0.9,0.5,1.0);
         RooGaussian sigmc_g1("sigmc_g1","",m,sigmc_mean1,sigmc_sigma1);
         RooGaussian sigmc_g2("sigmc_g2","",m,sigmc_mean2,sigmc_sigma2);
-        RooAddPdf pdf_sigmc("pdf_sigmc","",RooArgList(sigmc_g1,sigmc_g2),RooArgList(sig_frac));
+        RooAddPdf pdf_sigmc("pdf_sigmc","",RooArgList(sigmc_g1,sigmc_g2),RooArgList(sig_frac));*/
+
         pdf_sigmc.fitTo(*rds_mc);
 
         wspace->import(pdf_sigmc);
@@ -98,7 +117,7 @@ namespace norm_pdf {
 
         RooRealVar sig_shift("sig_shift","",0.,-0.02,0.02);
         RooRealVar sig_scale("sig_scale","",1.,0.8,1.2);
-
+/*
         RooAddition sig_mean1("sig_mean1", "", RooArgList(sigmc_mean1, sig_shift));
         RooAddition sig_mean2("sig_mean2", "", RooArgList(sigmc_mean2, sig_shift));
         RooProduct sig_sigma1("sig_sigma1", "", RooArgList(sigmc_sigma1, sig_scale));
@@ -107,6 +126,14 @@ namespace norm_pdf {
         RooGaussian sig_g1("sig_g1", "", m, sig_mean1, sig_sigma1);
         RooGaussian sig_g2("sig_g2", "", m, sig_mean2, sig_sigma2);
         RooAddPdf pdf_sig("pdf_sig", "", RooArgList(sig_g1,sig_g2), RooArgList(sig_frac));
+*/
+        RooAddition sig_mean("sig_mean", "", RooArgList(sigmc_mean, sig_shift));
+        RooAddition sig_sigma("sig_sigma", "", RooArgList(sigmc_sigma, sig_scale));
+        RooRealVar sig_alpha1("sig_alpha1", "", 1.5, 0.1, 10);
+        RooRealVar sig_n1("sig_n1", "", 2, 0.1, 10);
+        RooRealVar sig_alpha2("sig_alpha2", "", 1.5, 0.1, 10);
+        RooRealVar sig_n2("sig_n2", "", 2, 0.1, 10);
+        RooCrystalBall pdf_sig("pdf_sig", "", m, sig_mean, sig_sigma, sig_alpha1, sig_n1, sig_alpha2, sig_n2);
 
         RooRealVar comb_coeff("comb_coeff", "", -1.2, -10., 10.);
         RooExponential pdf_comb("pdf_comb", "", m, comb_coeff);
