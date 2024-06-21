@@ -92,7 +92,7 @@ for cat in range(8):
     maxcut=cuts[maxidx]
     best_cut.append(maxcut)
     ax[1].axvline(maxcut,linestyle="--",color="royalblue",label=f"BDT={np.tanh(maxcut):.4f}")
-
+    ax[1].axvline(np.arctanh(0.99),linestyle="--",color="limegreen",label="BDT=0.99")
     ax[1].set_ylabel("Z")
     ax[1].legend()
     ax[1].set_xlabel("atanh(BDT)")
