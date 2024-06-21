@@ -5,7 +5,7 @@ using namespace RooFit;
 namespace norm_pdf {
 
     void fill_dataset_data(RooWorkspace* wspace, unsigned int cate=0) {
-        RooRealVar m("m", "", 5.0, 5.8);
+        RooRealVar m("m_norm", "", 5.0, 5.8);
         RooRealVar wgt("wgt_norm", "", 1., 0., 1000.);
 
         RooDataSet *rds_data = new RooDataSet("rds_data", "", RooArgSet(m, wgt), "wgt");
@@ -66,7 +66,7 @@ namespace norm_pdf {
         cout << "Category: " << cate << endl;
         cout << "Selection efficiency: " << eff_d << " +- " << eff_err_d << endl;
 
-        wspace->import(m);
+        // wspace->import(m);
         wspace->import(*rds_mc, Rename(Form("rds_norm_mc_%d", cate)));
         wspace->import(RooRealVar(Form("Eff_norm_%d",cate),"",eff_d));
         wspace->import(RooRealVar(Form("EffErr_norm_%d",cate),"",eff_err_d));
@@ -75,7 +75,8 @@ namespace norm_pdf {
     }
 
     void fit(RooWorkspace* wspace, unsigned int cate = 0){
-        RooRealVar m = *(RooRealVar*)wspace->var("m");
+
+        RooRealVar m = *(RooRealVar*)wspace->var("m_norm");
         RooRealVar wgt = *(RooRealVar*)wspace->var("wgt_norm");
 
         RooDataSet *rds_mc = (RooDataSet*)wspace->data(Form("rds_norm_mc_%d", cate));
@@ -101,7 +102,7 @@ namespace norm_pdf {
 
         pdf_sigmc.fitTo(*rds_mc);
         
-        wspace->import(pdf_sigmc, RenameAllNodes(Form("normMc_%d", cate)), RenameAllVariablesExcept(Form("normMc_%d", cate), "m"));
+        wspace->import(pdf_sigmc, RenameAllNodes(Form("normMc_%d", cate)), RenameAllVariablesExcept(Form("normMc_%d", cate), "m_norm"));
 
         RooRealVar sig_shift("sig_shift","",0.,-0.02,0.02);
         RooRealVar sig_scale("sig_scale","",1.,0.8,1.2);

@@ -59,7 +59,7 @@ namespace signal_pdf {
         RooCBShape bs_cbline("bs_cbline", "", m, bs_mean2, bs_sigma2, bs_cbalpha, bs_cbn);
         RooAddPdf pdf("pdf", "", RooArgList(bs_gaus, bs_cbline), RooArgList(bs_frac));
 
-        pdf.fitTo(*rds);
+        // pdf.fitTo(*rds);
 
         wspace->import(pdf, RenameAllNodes(Form("signalMc_%d", cate)), RenameAllVariablesExcept(Form("signalMc_%d", cate), "m"));
     }
