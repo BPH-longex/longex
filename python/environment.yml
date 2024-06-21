@@ -1,0 +1,14 @@
+name: bsmumuenv
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - python 3.10.*
+  - snakemake
+  - uproot
+  - mplhep
+  - root
+  - matplotlib
+  - numpy
+  - pandas
