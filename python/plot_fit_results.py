@@ -40,14 +40,13 @@ def extract_category_name(directory_path):
     else:
         return None
 
-# Step 1: Reading JSON files
 def read_json_files(directory, variable):
     data = {"category": [], "value":[], "error":[]}
     directories = list_subdirectories(directory)
     for d in directories:
         category = extract_category_name(d)
         with open(os.path.join(d, "parameters.json"), 'r') as file:
-            print(os.path.join(d, "parameters.json"))
+            #print(os.path.join(d, "parameters.json"))
             content = json.load(file)
             data["category"].append(str(categories[category]["year"]) + "\n" + categories[category]["eta"])
             data["value"].append(content[variable]["value"])
@@ -55,7 +54,7 @@ def read_json_files(directory, variable):
                 
     return pd.DataFrame(data)
 
-# Step 2: Plotting the data
+
 def plot_parameters(data, parameter, mc, output_path):
     
     titles = data["category"]
@@ -68,18 +67,18 @@ def plot_parameters(data, parameter, mc, output_path):
 
     # Create the bar plot
     fig, ax = plt.subplots()
-    ax.bar(x_pos, values, yerr=errors, align='center', alpha=0.7, ecolor='black', capsize=10)
-    hep.cms.label('$B^{+} \\rightarrow J/\psi K^{+}$ ', data=mc, ax = ax, fontsize=12.)
+    plt.errorbar(x_pos, np.array(values), yerr=np.array(errors), fmt='o', linestyle='', markersize=5)
+    hep.cms.label('$B^{+} \\rightarrow J/\psi K^{+}$ ', data=mc, ax = ax)
 
 
     # Add labels and title
     ax.set_xlabel('Category')
     ax.set_ylabel(parameter)
     ax.set_xticks(x_pos)
-    ax.set_xticklabels(titles)
+    ax.set_xticklabels(titles, fontsize=10)
 
     # Show the plot
-    plt.show()
+    #plt.show()
     plt.savefig(output_path+'/'+parameter+'_per_category.png')
 
 if __name__ == "__main__":
@@ -91,6 +90,4 @@ if __name__ == "__main__":
     data = read_json_files(results_path, parameter)
     plot_parameters(data, parameter, mc, output_path)
 
-# Example usage
-directory = './results/plots/'
-main(directory)
+
