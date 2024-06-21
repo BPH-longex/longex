@@ -1,7 +1,7 @@
 */root_files/*
 *__pycache__*
 *.swp
-*.pdf
-*.png
+
+
 *.pyc
 try
