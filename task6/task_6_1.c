@@ -85,8 +85,12 @@ void task_6_1(string filename, float cut=0, bool profile=false) {
 
     RooDataSet *rds_data = new RooDataSet("rds_data", "", RooArgSet(*m, cate));
 
-    TFile *fin_data = new TFile("/eos/user/c/cmsdas/2024/long-ex-bph/bmmSoup10.root");
-    TTree *tin = (TTree *)fin_data->Get("bmmSoup10_100");
+    //TFile *fin_data = new TFile("/eos/user/c/cmsdas/2024/long-ex-bph/bmmSoup10.root");
+
+    //TTree *tin = (TTree *)fin_data->Get("bmmSoup10_100");
+
+    TFile *fin_data = new TFile("/eos/user/c/cmsdas/2024/long-ex-bph/bmmData.root");
+    TTree *tin = (TTree *)fin_data->Get("bmmData");
 
     uint cate_t;
     float m_t, bdt_t;
@@ -111,6 +115,8 @@ void task_6_1(string filename, float cut=0, bool profile=false) {
     RooFitResult* result=model->fitTo(*rds_data,Extended(true),Minos(RooArgSet(*BF_bs)),Save(true)
     //,ExternalConstraints(RooArgSet(*constr_BF_bu))
     );
+
+
 
 
 
@@ -145,18 +151,30 @@ void task_6_1(string filename, float cut=0, bool profile=false) {
 
 
     if (profile){
+        std::vector<float> centers;
+        std::vector<float> NLL;
         RooAbsReal* nll = model->createNLL(*rds_data,Extended(true));
-        TH1D *frameNLL = new TH1D("frameNLL","",35, 0., 2E-8);
+        TH1D *frameNLL = new TH1D("frameNLL","",35, 1.4E-9, 4.6E-9);
         for(int bin=1; bin<=frameNLL->GetNbinsX(); bin++) {
             BF_bs->setVal(frameNLL->GetBinCenter(bin));
             BF_bs->setConstant(true);
             model->fitTo(*rds_data,Extended(true));
             frameNLL->SetBinContent(bin,(nll->getVal()-result->minNll())*2.);
+            centers.push_back(frameNLL->GetBinCenter(bin));
+            NLL.push_back((nll->getVal()-result->minNll())*2.);
+        }
+
+        for (int i=0; i<centers.size(); i++){
+            cout << "BF_bs: " << centers[i] << " NLL: " << NLL[i] << endl;
         }
 
         TCanvas* canvasNLL = new TCanvas("canvasNLL", "", 600, 600);
         frameNLL->Draw("c");
         canvasNLL->Print("task_6_1_nll.pdf");
     }
+
+    RooWorkspace *wspace_new = (RooWorkspace *)fin_wspace->Get("wspace");
+    wspace_new->import(*model);
+    wspace_new->writeToFile("outfile.root");
 
 }
