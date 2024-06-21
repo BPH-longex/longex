@@ -1,0 +1,4610 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/04                        https://root.cern |
+  | (c) 1995-2024, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Feb 06 2024, 23:27:10                 |
+  | From heads/master@tags/v6-30-04                                  |
+  | With                                                             |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing task_6_1.c("wspaceBestBDT.root")...
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689d26310
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689d26ae0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689d27280
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689d28290
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x5616855dbb60
+  Clients: 
+    (0x561685d5b590,V-) RooGaussian::bs_gaus_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x5616855d3af0
+  Clients: 
+    (0x561685d5b590,V-) RooGaussian::bs_gaus_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x561684483590
+  Clients: 
+    (0x561685d7fbd0,V-) RooAddPdf::pdf_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561684483db0
+  Clients: 
+    (0x561685e552f0,V-) RooCBShape::bs_cbline_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x5616844cb210
+  Clients: 
+    (0x561685e552f0,V-) RooCBShape::bs_cbline_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x56167aabab00
+  Clients: 
+    (0x561685e552f0,V-) RooCBShape::bs_cbline_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561683aa6790
+  Clients: 
+    (0x561685e552f0,V-) RooCBShape::bs_cbline_signalMc_0 " (signalMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689d28a60
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689dee200
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_norm"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689dee980
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689def150
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689db8950
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689db9040
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689db9790
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dba050
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dba910
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689dbb230
+  Clients: 
+    (0x561689d29c80,V-) RooCrystalBall::pdf_sigmc_normMc_0 " (normMc_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689df6d40
+  Clients: 
+    (0x561689df4570,V-) RooCrystalBall::pdf_sig_norm_0 " (norm_0)"
+    (0x561689df7200,V-) RooExponential::pdf_comb_norm_0 " (norm_0)"
+    (0x561689e0fe30,V-) RooGenericPdf::pdf_jpsix_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689eb4d40
+  Clients: 
+    (0x56168560d830,V-) RooAddition::sig_mean_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689eb5540
+  Clients: 
+    (0x56168560d830,V-) RooAddition::sig_mean_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 8.10738e-05
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689ef26c0
+  Clients: 
+    (0x561689eb61a0,V-) RooProduct::sig_sigma_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689ef2ed0
+  Clients: 
+    (0x561689eb61a0,V-) RooProduct::sig_sigma_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 5.45186e-10
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689ef3af0
+  Clients: 
+    (0x561689df4570,V-) RooCrystalBall::pdf_sig_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689ef4470
+  Clients: 
+    (0x561689df4570,V-) RooCrystalBall::pdf_sig_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689ef4d70
+  Clients: 
+    (0x561689df4570,V-) RooCrystalBall::pdf_sig_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689ef5600
+  Clients: 
+    (0x561689df4570,V-) RooCrystalBall::pdf_sig_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689ef6350
+  Clients: 
+    (0x561689def920,V-) RooAddPdf::model_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 899.325
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689e0f230
+  Clients: 
+    (0x561689df7200,V-) RooExponential::pdf_comb_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0458999
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x56168560bfa0
+  Clients: 
+    (0x561689e0fe30,V-) RooGenericPdf::pdf_jpsix_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 0.000561012
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x56168560c7c0
+  Clients: 
+    (0x561689e0fe30,V-) RooGenericPdf::pdf_jpsix_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.000966824
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689ef7440
+  Clients: 
+    (0x561689def920,V-) RooAddPdf::model_norm_0 " (norm_0)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 493.956
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561685ed09e0
+  Clients: 
+    (0x561685e92480,V-) RooBernstein::pdf_comb_0 ""
+    (0x561685ed0ee0,V-) RooFormulaVar::comb_B2_0 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_0"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ef8710
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ef8ee0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ef96b0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ef9eb0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x56168676ce90
+  Clients: 
+    (0x56168676a800,V-) RooGaussian::bs_gaus_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x56168676d850
+  Clients: 
+    (0x56168676a800,V-) RooGaussian::bs_gaus_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x561686772d30
+  Clients: 
+    (0x56168676e220,V-) RooAddPdf::pdf_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561686775e20
+  Clients: 
+    (0x5616867736c0,V-) RooCBShape::bs_cbline_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x5616867767e0
+  Clients: 
+    (0x5616867736c0,V-) RooCBShape::bs_cbline_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x561686777170
+  Clients: 
+    (0x5616867736c0,V-) RooCBShape::bs_cbline_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561686777b00
+  Clients: 
+    (0x5616867736c0,V-) RooCBShape::bs_cbline_signalMc_1 " (signalMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689efa680
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689efae50
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689dbd970
+  Clients: 
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689dbe330
+  Clients: 
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689dbecc0
+  Clients: 
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dbf650
+  Clients: 
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dbffe0
+  Clients: 
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689dc0970
+  Clients: 
+    (0x561689dbbff0,V-) RooCrystalBall::pdf_sigmc_normMc_1 " (normMc_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689f02310
+  Clients: 
+    (0x561689effb40,V-) RooCrystalBall::pdf_sig_norm_1 " (norm_1)"
+    (0x561689f027b0,V-) RooExponential::pdf_comb_norm_1 " (norm_1)"
+    (0x561689f05ba0,V-) RooGenericPdf::pdf_jpsix_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689f0c290
+  Clients: 
+    (0x561689f09c60,V-) RooAddition::sig_mean_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f0cbe0
+  Clients: 
+    (0x561689f09c60,V-) RooAddition::sig_mean_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 7.37148e-05
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689f0ff90
+  Clients: 
+    (0x561689f0d8b0,V-) RooProduct::sig_sigma_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f108e0
+  Clients: 
+    (0x561689f0d8b0,V-) RooProduct::sig_sigma_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 4.08228e-08
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689f11590
+  Clients: 
+    (0x561689effb40,V-) RooCrystalBall::pdf_sig_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689f11f10
+  Clients: 
+    (0x561689effb40,V-) RooCrystalBall::pdf_sig_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689f12810
+  Clients: 
+    (0x561689effb40,V-) RooCrystalBall::pdf_sig_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689f130a0
+  Clients: 
+    (0x561689effb40,V-) RooCrystalBall::pdf_sig_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689f13df0
+  Clients: 
+    (0x561689efb620,V-) RooAddPdf::model_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 1136.99
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689f04df0
+  Clients: 
+    (0x561689f027b0,V-) RooExponential::pdf_comb_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0226278
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f08200
+  Clients: 
+    (0x561689f05ba0,V-) RooGenericPdf::pdf_jpsix_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 0.000590707
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f08b60
+  Clients: 
+    (0x561689f05ba0,V-) RooGenericPdf::pdf_jpsix_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.000956049
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689f14ee0
+  Clients: 
+    (0x561689efb620,V-) RooAddPdf::model_norm_1 " (norm_1)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 0.0953104
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x56168677b4e0
+  Clients: 
+    (0x561686778e20,V-) RooBernstein::pdf_comb_1 ""
+    (0x56168677b980,V-) RooFormulaVar::comb_B2_1 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_1"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f161b0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f16980
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f17150
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f17950
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x561686c112b0
+  Clients: 
+    (0x561686c0ec20,V-) RooGaussian::bs_gaus_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x561686c11c70
+  Clients: 
+    (0x561686c0ec20,V-) RooGaussian::bs_gaus_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x561686c17250
+  Clients: 
+    (0x561686c12640,V-) RooAddPdf::pdf_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561686c1a340
+  Clients: 
+    (0x561686c17be0,V-) RooCBShape::bs_cbline_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x561686c1ad00
+  Clients: 
+    (0x561686c17be0,V-) RooCBShape::bs_cbline_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x561686c1b690
+  Clients: 
+    (0x561686c17be0,V-) RooCBShape::bs_cbline_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561686c1c020
+  Clients: 
+    (0x561686c17be0,V-) RooCBShape::bs_cbline_signalMc_2 " (signalMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f18120
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f188f0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689dc3f20
+  Clients: 
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689dc48e0
+  Clients: 
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689dc5270
+  Clients: 
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dc5c00
+  Clients: 
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dc6590
+  Clients: 
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689dc6f20
+  Clients: 
+    (0x561689dc1730,V-) RooCrystalBall::pdf_sigmc_normMc_2 " (normMc_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689f204e0
+  Clients: 
+    (0x561689f1dd10,V-) RooCrystalBall::pdf_sig_norm_2 " (norm_2)"
+    (0x561689f20980,V-) RooExponential::pdf_comb_norm_2 " (norm_2)"
+    (0x561689f23d70,V-) RooGenericPdf::pdf_jpsix_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689f2a460
+  Clients: 
+    (0x561689f27e30,V-) RooAddition::sig_mean_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f2adb0
+  Clients: 
+    (0x561689f27e30,V-) RooAddition::sig_mean_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 0.000116035
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689f2e160
+  Clients: 
+    (0x561689f2ba80,V-) RooProduct::sig_sigma_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f2eab0
+  Clients: 
+    (0x561689f2ba80,V-) RooProduct::sig_sigma_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 3.34957e-09
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689f2f760
+  Clients: 
+    (0x561689f1dd10,V-) RooCrystalBall::pdf_sig_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689d27a20
+  Clients: 
+    (0x561689f1dd10,V-) RooCrystalBall::pdf_sig_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689f312c0
+  Clients: 
+    (0x561689f1dd10,V-) RooCrystalBall::pdf_sig_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689f31b50
+  Clients: 
+    (0x561689f1dd10,V-) RooCrystalBall::pdf_sig_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689f328a0
+  Clients: 
+    (0x561689f190c0,V-) RooAddPdf::model_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 1602.42
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689f22fc0
+  Clients: 
+    (0x561689f20980,V-) RooExponential::pdf_comb_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0604689
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f263d0
+  Clients: 
+    (0x561689f23d70,V-) RooGenericPdf::pdf_jpsix_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 0.000785923
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f26d30
+  Clients: 
+    (0x561689f23d70,V-) RooGenericPdf::pdf_jpsix_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.00126505
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689f33990
+  Clients: 
+    (0x561689f190c0,V-) RooAddPdf::model_norm_2 " (norm_2)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 1.69051
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561686c1fa00
+  Clients: 
+    (0x561686c1d340,V-) RooBernstein::pdf_comb_2 ""
+    (0x561686c1fea0,V-) RooFormulaVar::comb_B2_2 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_2"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f34c60
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f35430
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f35c00
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f36400
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x5616874771a0
+  Clients: 
+    (0x561687474b10,V-) RooGaussian::bs_gaus_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x561687477b60
+  Clients: 
+    (0x561687474b10,V-) RooGaussian::bs_gaus_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x56168747d140
+  Clients: 
+    (0x561687478530,V-) RooAddPdf::pdf_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561687480230
+  Clients: 
+    (0x56168747dad0,V-) RooCBShape::bs_cbline_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x561687480bf0
+  Clients: 
+    (0x56168747dad0,V-) RooCBShape::bs_cbline_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x561687481580
+  Clients: 
+    (0x56168747dad0,V-) RooCBShape::bs_cbline_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561687481f10
+  Clients: 
+    (0x56168747dad0,V-) RooCBShape::bs_cbline_signalMc_3 " (signalMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f36bd0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f373a0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689dca4d0
+  Clients: 
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689dcae90
+  Clients: 
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689dcb820
+  Clients: 
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dcc1b0
+  Clients: 
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dccb40
+  Clients: 
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689dcd4d0
+  Clients: 
+    (0x561689dc7ce0,V-) RooCrystalBall::pdf_sigmc_normMc_3 " (normMc_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689f3ef90
+  Clients: 
+    (0x561689f3c7c0,V-) RooCrystalBall::pdf_sig_norm_3 " (norm_3)"
+    (0x561689f3f430,V-) RooExponential::pdf_comb_norm_3 " (norm_3)"
+    (0x561689f42820,V-) RooGenericPdf::pdf_jpsix_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689f48f10
+  Clients: 
+    (0x561689f468e0,V-) RooAddition::sig_mean_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f49860
+  Clients: 
+    (0x561689f468e0,V-) RooAddition::sig_mean_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 0.000112187
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689f4cc10
+  Clients: 
+    (0x561689f4a530,V-) RooProduct::sig_sigma_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f4d560
+  Clients: 
+    (0x561689f4a530,V-) RooProduct::sig_sigma_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 1.70103e-07
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689f4e210
+  Clients: 
+    (0x561689f3c7c0,V-) RooCrystalBall::pdf_sig_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689f4eb90
+  Clients: 
+    (0x561689f3c7c0,V-) RooCrystalBall::pdf_sig_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689f4f490
+  Clients: 
+    (0x561689f3c7c0,V-) RooCrystalBall::pdf_sig_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689f4fd20
+  Clients: 
+    (0x561689f3c7c0,V-) RooCrystalBall::pdf_sig_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689f50a70
+  Clients: 
+    (0x561689f37b70,V-) RooAddPdf::model_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 1859.89
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689f41a70
+  Clients: 
+    (0x561689f3f430,V-) RooExponential::pdf_comb_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0293994
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f44e80
+  Clients: 
+    (0x561689f42820,V-) RooGenericPdf::pdf_jpsix_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 0.000907131
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f457e0
+  Clients: 
+    (0x561689f42820,V-) RooGenericPdf::pdf_jpsix_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.0015749
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689f51b60
+  Clients: 
+    (0x561689f37b70,V-) RooAddPdf::model_norm_3 " (norm_3)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 0.206057
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x5616874858f0
+  Clients: 
+    (0x561687483230,V-) RooBernstein::pdf_comb_3 ""
+    (0x561687485d90,V-) RooFormulaVar::comb_B2_3 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_3"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f52e30
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f53600
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f53dd0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f545d0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x561687edc910
+  Clients: 
+    (0x561687eda280,V-) RooGaussian::bs_gaus_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x561687edd2d0
+  Clients: 
+    (0x561687eda280,V-) RooGaussian::bs_gaus_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x561687ee28b0
+  Clients: 
+    (0x561687eddca0,V-) RooAddPdf::pdf_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561687ee59a0
+  Clients: 
+    (0x561687ee3240,V-) RooCBShape::bs_cbline_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x561687ee6360
+  Clients: 
+    (0x561687ee3240,V-) RooCBShape::bs_cbline_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x561687ee6cf0
+  Clients: 
+    (0x561687ee3240,V-) RooCBShape::bs_cbline_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561687ee7680
+  Clients: 
+    (0x561687ee3240,V-) RooCBShape::bs_cbline_signalMc_4 " (signalMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f54da0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f55570
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689dd0a80
+  Clients: 
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689dd1440
+  Clients: 
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689dd1dd0
+  Clients: 
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dd2760
+  Clients: 
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dd30f0
+  Clients: 
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689dd3a80
+  Clients: 
+    (0x561689dce290,V-) RooCrystalBall::pdf_sigmc_normMc_4 " (normMc_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689f5d160
+  Clients: 
+    (0x561689f5a990,V-) RooCrystalBall::pdf_sig_norm_4 " (norm_4)"
+    (0x561689f5d600,V-) RooExponential::pdf_comb_norm_4 " (norm_4)"
+    (0x561689f609f0,V-) RooGenericPdf::pdf_jpsix_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689f670e0
+  Clients: 
+    (0x561689f64ab0,V-) RooAddition::sig_mean_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f67a30
+  Clients: 
+    (0x561689f64ab0,V-) RooAddition::sig_mean_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 6.90718e-05
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689f6ade0
+  Clients: 
+    (0x561689f68700,V-) RooProduct::sig_sigma_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f6b730
+  Clients: 
+    (0x561689f68700,V-) RooProduct::sig_sigma_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 7.10645e-10
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689f6c3e0
+  Clients: 
+    (0x561689f5a990,V-) RooCrystalBall::pdf_sig_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689f6cd60
+  Clients: 
+    (0x561689f5a990,V-) RooCrystalBall::pdf_sig_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689f6d660
+  Clients: 
+    (0x561689f5a990,V-) RooCrystalBall::pdf_sig_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689f6def0
+  Clients: 
+    (0x561689f5a990,V-) RooCrystalBall::pdf_sig_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689f6ec40
+  Clients: 
+    (0x561689f55d40,V-) RooAddPdf::model_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 2747.9
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689f5fc40
+  Clients: 
+    (0x561689f5d600,V-) RooExponential::pdf_comb_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0142365
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f63050
+  Clients: 
+    (0x561689f609f0,V-) RooGenericPdf::pdf_jpsix_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 0.00075373
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f639b0
+  Clients: 
+    (0x561689f609f0,V-) RooGenericPdf::pdf_jpsix_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.00101468
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689f6fd30
+  Clients: 
+    (0x561689f55d40,V-) RooAddPdf::model_norm_4 " (norm_4)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 0.362246
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561687eeb060
+  Clients: 
+    (0x561687ee89a0,V-) RooBernstein::pdf_comb_4 ""
+    (0x561687eeb500,V-) RooFormulaVar::comb_B2_4 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_4"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f71000
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f717d0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f71fa0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f727a0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x5616887113a0
+  Clients: 
+    (0x56168870ed10,V-) RooGaussian::bs_gaus_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x561688711d60
+  Clients: 
+    (0x56168870ed10,V-) RooGaussian::bs_gaus_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x561688717340
+  Clients: 
+    (0x561688712730,V-) RooAddPdf::pdf_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x56168871a430
+  Clients: 
+    (0x561688717cd0,V-) RooCBShape::bs_cbline_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x56168871adf0
+  Clients: 
+    (0x561688717cd0,V-) RooCBShape::bs_cbline_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x56168871b780
+  Clients: 
+    (0x561688717cd0,V-) RooCBShape::bs_cbline_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x56168871c110
+  Clients: 
+    (0x561688717cd0,V-) RooCBShape::bs_cbline_signalMc_5 " (signalMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f72f70
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f73740
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689dd7030
+  Clients: 
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689dd79f0
+  Clients: 
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689dd8380
+  Clients: 
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dd8d10
+  Clients: 
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dd96a0
+  Clients: 
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689dda030
+  Clients: 
+    (0x561689dd4840,V-) RooCrystalBall::pdf_sigmc_normMc_5 " (normMc_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689f7b330
+  Clients: 
+    (0x561689f78b60,V-) RooCrystalBall::pdf_sig_norm_5 " (norm_5)"
+    (0x561689f7b7d0,V-) RooExponential::pdf_comb_norm_5 " (norm_5)"
+    (0x561689f7ebc0,V-) RooGenericPdf::pdf_jpsix_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689f852b0
+  Clients: 
+    (0x561689f82c80,V-) RooAddition::sig_mean_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f85c00
+  Clients: 
+    (0x561689f82c80,V-) RooAddition::sig_mean_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 6.65735e-05
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689f88fb0
+  Clients: 
+    (0x561689f868d0,V-) RooProduct::sig_sigma_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f89900
+  Clients: 
+    (0x561689f868d0,V-) RooProduct::sig_sigma_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 2.67422e-08
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689f8a5b0
+  Clients: 
+    (0x561689f78b60,V-) RooCrystalBall::pdf_sig_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689f8af30
+  Clients: 
+    (0x561689f78b60,V-) RooCrystalBall::pdf_sig_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689f8b830
+  Clients: 
+    (0x561689f78b60,V-) RooCrystalBall::pdf_sig_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689f8c0c0
+  Clients: 
+    (0x561689f78b60,V-) RooCrystalBall::pdf_sig_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689f8ce10
+  Clients: 
+    (0x561689f73f10,V-) RooAddPdf::model_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 2753.57
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689f7de10
+  Clients: 
+    (0x561689f7b7d0,V-) RooExponential::pdf_comb_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0103227
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f81220
+  Clients: 
+    (0x561689f7ebc0,V-) RooGenericPdf::pdf_jpsix_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 1.10268e-06
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f81b80
+  Clients: 
+    (0x561689f7ebc0,V-) RooGenericPdf::pdf_jpsix_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.000944926
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689f8df00
+  Clients: 
+    (0x561689f73f10,V-) RooAddPdf::model_norm_5 " (norm_5)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 0.00370327
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561688720140
+  Clients: 
+    (0x56168871da80,V-) RooBernstein::pdf_comb_5 ""
+    (0x5616887205e0,V-) RooFormulaVar::comb_B2_5 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_5"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f8f1d0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f8f9a0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f90170
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f90970
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x561689106fd0
+  Clients: 
+    (0x561689104940,V-) RooGaussian::bs_gaus_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x561689107990
+  Clients: 
+    (0x561689104940,V-) RooGaussian::bs_gaus_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x56168910cf70
+  Clients: 
+    (0x561689108360,V-) RooAddPdf::pdf_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561689110060
+  Clients: 
+    (0x56168910d900,V-) RooCBShape::bs_cbline_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x561689110a20
+  Clients: 
+    (0x56168910d900,V-) RooCBShape::bs_cbline_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x5616891113b0
+  Clients: 
+    (0x56168910d900,V-) RooCBShape::bs_cbline_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561689111d40
+  Clients: 
+    (0x56168910d900,V-) RooCBShape::bs_cbline_signalMc_6 " (signalMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f91140
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689f91910
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561684419a90
+  Clients: 
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x56168441a450
+  Clients: 
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x56168441ade0
+  Clients: 
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x56168441b770
+  Clients: 
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x56168441c100
+  Clients: 
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689de64c0
+  Clients: 
+    (0x5616844172a0,V-) RooCrystalBall::pdf_sigmc_normMc_6 " (normMc_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689f99500
+  Clients: 
+    (0x561689f96d30,V-) RooCrystalBall::pdf_sig_norm_6 " (norm_6)"
+    (0x561689f999a0,V-) RooExponential::pdf_comb_norm_6 " (norm_6)"
+    (0x561689f9cd90,V-) RooGenericPdf::pdf_jpsix_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689fa3480
+  Clients: 
+    (0x561689fa0e50,V-) RooAddition::sig_mean_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689fa3dd0
+  Clients: 
+    (0x561689fa0e50,V-) RooAddition::sig_mean_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 7.85921e-05
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689fa7180
+  Clients: 
+    (0x561689fa4aa0,V-) RooProduct::sig_sigma_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689fa7ad0
+  Clients: 
+    (0x561689fa4aa0,V-) RooProduct::sig_sigma_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 1.24768e-08
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689fa8780
+  Clients: 
+    (0x561689f96d30,V-) RooCrystalBall::pdf_sig_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689dda9b0
+  Clients: 
+    (0x561689f96d30,V-) RooCrystalBall::pdf_sig_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689ddb2b0
+  Clients: 
+    (0x561689f96d30,V-) RooCrystalBall::pdf_sig_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689ddbb40
+  Clients: 
+    (0x561689f96d30,V-) RooCrystalBall::pdf_sig_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689ddc890
+  Clients: 
+    (0x561689f920e0,V-) RooAddPdf::model_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 4852.57
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689f9bfe0
+  Clients: 
+    (0x561689f999a0,V-) RooExponential::pdf_comb_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.0151703
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689f9f3f0
+  Clients: 
+    (0x561689f9cd90,V-) RooGenericPdf::pdf_jpsix_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 7.78072e-06
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689f9fd50
+  Clients: 
+    (0x561689f9cd90,V-) RooGenericPdf::pdf_jpsix_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.00127317
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689ddd980
+  Clients: 
+    (0x561689f920e0,V-) RooAddPdf::model_norm_6 " (norm_6)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 0.16202
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689115720
+  Clients: 
+    (0x561689113060,V-) RooBernstein::pdf_comb_6 ""
+    (0x561689115bc0,V-) RooFormulaVar::comb_B2_6 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_6"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ddec50
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_peak_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ddf420
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "wgt_semilepBkg_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1000 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689ddfbf0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "N_semilep_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689de03f0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_bs_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean1,SnapShot_ExtRefClone] 
+  Address: 0x561689d16410
+  Clients: 
+    (0x561689d13d80,V-) RooGaussian::bs_gaus_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean1_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma1,SnapShot_ExtRefClone] 
+  Address: 0x561689d16dd0
+  Clients: 
+    (0x561689d13d80,V-) RooGaussian::bs_gaus_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma1_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_frac,SnapShot_ExtRefClone] 
+  Address: 0x561689d1c3b0
+  Clients: 
+    (0x561689d177a0,V-) RooAddPdf::pdf_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_frac_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_mean2,SnapShot_ExtRefClone] 
+  Address: 0x561689d1f4a0
+  Clients: 
+    (0x561689d1cd40,V-) RooCBShape::bs_cbline_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_mean2_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.5 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_sigma2,SnapShot_ExtRefClone] 
+  Address: 0x561689d1fe60
+  Clients: 
+    (0x561689d1cd40,V-) RooCBShape::bs_cbline_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_sigma2_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.04 , 0.2 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbalpha,SnapShot_ExtRefClone] 
+  Address: 0x561689d207f0
+  Clients: 
+    (0x561689d1cd40,V-) RooCBShape::bs_cbline_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbalpha_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:bs_cbn,SnapShot_ExtRefClone] 
+  Address: 0x561689d21180
+  Clients: 
+    (0x561689d1cd40,V-) RooCBShape::bs_cbline_signalMc_7 " (signalMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "bs_cbn_signalMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689de0bc0
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "Eff_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689de1390
+  Clients: 
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "EffErr_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -INF , +INF ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689dea0b0
+  Clients: 
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_normMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689deaa70
+  Clients: 
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_normMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689deb400
+  Clients: 
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_normMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689debd90
+  Clients: 
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_normMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689dec720
+  Clients: 
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_normMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689ded0b0
+  Clients: 
+    (0x561689de7f10,V-) RooCrystalBall::pdf_sigmc_normMc_7 " (normMc_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_normMc_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:m_norm,SnapShot_ExtRefClone] 
+  Address: 0x561689fc35c0
+  Clients: 
+    (0x561689fc0df0,V-) RooCrystalBall::pdf_sig_norm_7 " (norm_7)"
+    (0x561689fc3a60,V-) RooExponential::pdf_comb_norm_7 " (norm_7)"
+    (0x561689fc6e50,V-) RooGenericPdf::pdf_jpsix_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "m_norm_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 5 , 5.8 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_mean,SnapShot_ExtRefClone] 
+  Address: 0x561689fcd540
+  Clients: 
+    (0x561689fcaf10,V-) RooAddition::sig_mean_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_mean_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.2 , 5.4 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689fcde90
+  Clients: 
+    (0x561689fcaf10,V-) RooAddition::sig_mean_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_shift_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -0.02 , 0.02 ]
+--- RooRealVar ---
+  Error = 7.56858e-05
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_sigma,SnapShot_ExtRefClone] 
+  Address: 0x561689fd1240
+  Clients: 
+    (0x561689fceb60,V-) RooProduct::sig_sigma_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_sigma_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.005 , 0.06 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sig_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689fd1b90
+  Clients: 
+    (0x561689fceb60,V-) RooProduct::sig_sigma_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sig_scale_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.8 , 1.2 ]
+--- RooRealVar ---
+  Error = 3.0928e-07
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha1,SnapShot_ExtRefClone] 
+  Address: 0x561689fd2840
+  Clients: 
+    (0x561689fc0df0,V-) RooCrystalBall::pdf_sig_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha1_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n1,SnapShot_ExtRefClone] 
+  Address: 0x561689fd31c0
+  Clients: 
+    (0x561689fc0df0,V-) RooCrystalBall::pdf_sig_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n1_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_alpha2,SnapShot_ExtRefClone] 
+  Address: 0x561689fd3ac0
+  Clients: 
+    (0x561689fc0df0,V-) RooCrystalBall::pdf_sig_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_alpha2_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:sigmc_n2,SnapShot_ExtRefClone] 
+  Address: 0x561689fd4350
+  Clients: 
+    (0x561689fc0df0,V-) RooCrystalBall::pdf_sig_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "sigmc_n2_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.1 , 10 ]
+--- RooRealVar ---
+  Error = 0
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_sig,SnapShot_ExtRefClone] 
+  Address: 0x561689fd50a0
+  Clients: 
+    (0x561689de1b60,V-) RooAddPdf::model_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_sig_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1e+08 ]
+--- RooRealVar ---
+  Error = 5626.37
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:comb_coeff,SnapShot_ExtRefClone] 
+  Address: 0x561689fc60a0
+  Clients: 
+    (0x561689fc3a60,V-) RooExponential::pdf_comb_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_coeff_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ -10 , 10 ]
+--- RooRealVar ---
+  Error = 0.013635
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_shift,SnapShot_ExtRefClone] 
+  Address: 0x561689fc94b0
+  Clients: 
+    (0x561689fc6e50,V-) RooGenericPdf::pdf_jpsix_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_shift_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 5.12 , 5.16 ]
+--- RooRealVar ---
+  Error = 8.30141e-08
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:jpsix_scale,SnapShot_ExtRefClone] 
+  Address: 0x561689fc9e10
+  Clients: 
+    (0x561689fc6e50,V-) RooGenericPdf::pdf_jpsix_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "jpsix_scale_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0.001 , 0.08 ]
+--- RooRealVar ---
+  Error = 0.00101481
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,ORIGNAME:n_jpsix,SnapShot_ExtRefClone] 
+  Address: 0x561689fd6190
+  Clients: 
+    (0x561689de1b60,V-) RooAddPdf::model_norm_7 " (norm_7)"
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "n_jpsix_norm_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 100000 ]
+--- RooRealVar ---
+  Error = 0.0333445
+--- RooAbsArg ---
+  Value State: clean
+  Shape State: clean
+  Attributes:  [Constant,SnapShot_ExtRefClone] 
+  Address: 0x561689d24b60
+  Clients: 
+    (0x561689d224a0,V-) RooBernstein::pdf_comb_7 ""
+    (0x561689d25000,V-) RooFormulaVar::comb_B2_7 ""
+  Servers: 
+  Proxies: 
+--- RooAbsReal ---
+
+  Plot label is "comb_B1_7"
+--- RooAbsRealLValue ---
+  Fit range is [ 0 , 1 ]
+--- RooRealVar ---
+  Error = 0
+[#0] WARNING:InputArguments -- The parameter 'Bf_bu_sigma' with range [-inf, inf] of the RooGaussian 'constr_BF_bu' exceeds the safe range of (0, inf). Advise to limit its range.
+RooAbsTestStatistic::initSimMode: creating slave calculator #0 for state c0 (17 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #1 for state c1 (47 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #2 for state c2 (21 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #3 for state c3 (40 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #4 for state c4 (74 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #5 for state c5 (75 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #6 for state c6 (84 dataset entries)
+RooAbsTestStatistic::initSimMode: creating slave calculator #7 for state c7 (193 dataset entries)
+[#1] INFO:Fitting -- RooAbsTestStatistic::initSimMode: created 8 slave calculators.
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_0,pdf_peakingBkg_0,pdf_semilepBkg_0,pdf_comb_0)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_1,pdf_peakingBkg_1,pdf_semilepBkg_1,pdf_comb_1)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_2,pdf_peakingBkg_2,pdf_semilepBkg_2,pdf_comb_2)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_3,pdf_peakingBkg_3,pdf_semilepBkg_3,pdf_comb_3)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_4,pdf_peakingBkg_4,pdf_semilepBkg_4,pdf_comb_4)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_5,pdf_peakingBkg_5,pdf_semilepBkg_5,pdf_comb_5)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_6,pdf_peakingBkg_6,pdf_semilepBkg_6,pdf_comb_6)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_7,pdf_peakingBkg_7,pdf_semilepBkg_7,pdf_comb_7)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_0,pdf_peakingBkg_0,pdf_semilepBkg_0,pdf_comb_0)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_1,pdf_peakingBkg_1,pdf_semilepBkg_1,pdf_comb_1)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_2,pdf_peakingBkg_2,pdf_semilepBkg_2,pdf_comb_2)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_3,pdf_peakingBkg_3,pdf_semilepBkg_3,pdf_comb_3)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_4,pdf_peakingBkg_4,pdf_semilepBkg_4,pdf_comb_4)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_5,pdf_peakingBkg_5,pdf_semilepBkg_5,pdf_comb_5)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_6,pdf_peakingBkg_6,pdf_semilepBkg_6,pdf_comb_6)
+[#1] INFO:Minimization --  The following expressions have been identified as constant and will be precalculated and cached: (pdf_signalMc_7,pdf_peakingBkg_7,pdf_semilepBkg_7,pdf_comb_7)
+Minuit2Minimizer: Minimize with max-calls 4500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -808.95542524305165
+Edm   = 5.47398366587543612e-05
+Nfcn  = 282
+BF_bs	  = 3.61349e-09	 +/-  4.06286e-10	(limited)
+n_comb_0	  = 7.94166	 +/-  3.52062	(limited)
+n_comb_1	  = 26.6662	 +/-  6.18727	(limited)
+n_comb_2	  = 0	 (const)
+n_comb_3	  = 23.8767	 +/-  5.74224	(limited)
+n_comb_4	  = 44.444	 +/-  28.924	(limited)
+n_comb_5	  = 22.2222	 +/-  1.13647	(limited)
+n_comb_6	  = 37.4994	 +/-  7.98583	(limited)
+n_comb_7	  = 124.326	 +/-  13.1142	(limited)
+Number of free parameters from FitConfig = 9
+Number of free parameters from Minimizer = 8
+******************************************************************************************************
+Minuit2Minimizer::GetMinosError - Run MINOS LOWER error for parameter #0 : BF_bs using max-calls 4500, tolerance 1
+******************************************************************************************************
+Minuit2Minimizer::GetMinosError - Run MINOS UPPER error for parameter #0 : BF_bs using max-calls 4500, tolerance 1
+Minos: Lower error for parameter BF_bs  :  -3.95728e-10
+Minos: Upper error for parameter BF_bs  :  4.17425e-10
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 17 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_0) directly selected PDF components: (pdf_signalMc_0)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_0) indirectly selected PDF components: (bs_gaus_signalMc_0,bs_cbline_signalMc_0)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_0) directly selected PDF components: (pdf_peakingBkg_0)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_0) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_0) directly selected PDF components: (pdf_semilepBkg_0)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_0) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 47 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_1) directly selected PDF components: (pdf_signalMc_1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_1) indirectly selected PDF components: (bs_gaus_signalMc_1,bs_cbline_signalMc_1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_1) directly selected PDF components: (pdf_peakingBkg_1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_1) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_1) directly selected PDF components: (pdf_semilepBkg_1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_1) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 21 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_2) directly selected PDF components: (pdf_signalMc_2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_2) indirectly selected PDF components: (bs_gaus_signalMc_2,bs_cbline_signalMc_2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_2) directly selected PDF components: (pdf_peakingBkg_2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_2) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_2) directly selected PDF components: (pdf_semilepBkg_2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_2) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 40 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_3) directly selected PDF components: (pdf_signalMc_3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_3) indirectly selected PDF components: (bs_gaus_signalMc_3,bs_cbline_signalMc_3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_3) directly selected PDF components: (pdf_peakingBkg_3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_3) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_3) directly selected PDF components: (pdf_semilepBkg_3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_3) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 74 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_4) directly selected PDF components: (pdf_signalMc_4)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_4) indirectly selected PDF components: (bs_gaus_signalMc_4,bs_cbline_signalMc_4)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_4) directly selected PDF components: (pdf_peakingBkg_4)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_4) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_4) directly selected PDF components: (pdf_semilepBkg_4)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_4) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 75 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_5) directly selected PDF components: (pdf_signalMc_5)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_5) indirectly selected PDF components: (bs_gaus_signalMc_5,bs_cbline_signalMc_5)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_5) directly selected PDF components: (pdf_peakingBkg_5)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_5) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_5) directly selected PDF components: (pdf_semilepBkg_5)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_5) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 84 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_6) directly selected PDF components: (pdf_signalMc_6)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_6) indirectly selected PDF components: (bs_gaus_signalMc_6,bs_cbline_signalMc_6)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_6) directly selected PDF components: (pdf_peakingBkg_6)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_6) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_6) directly selected PDF components: (pdf_semilepBkg_6)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_6) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooTreeData::plotOn: plotting 193 events out of 551 total events
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_7) directly selected PDF components: (pdf_signalMc_7)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_7) indirectly selected PDF components: (bs_gaus_signalMc_7,bs_cbline_signalMc_7)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_7) directly selected PDF components: (pdf_peakingBkg_7)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_7) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_7) directly selected PDF components: (pdf_semilepBkg_7)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(pdf_sum_7) indirectly selected PDF components: ()
+
+  RooFitResult: minimized FCN value: -808.955, estimated distance to minimum: 5.47593e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 MINOS=0 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                 BF_bu    6.0802e-05
+              Eff_bs_0    1.0152e-03
+              Eff_bs_1    1.8701e-03
+              Eff_bs_2    1.0257e-03
+              Eff_bs_3    1.8697e-03
+              Eff_bs_4    1.4530e-03
+              Eff_bs_5    1.7131e-03
+              Eff_bs_6    1.4245e-03
+              Eff_bs_7    2.6541e-03
+            Eff_norm_0    1.0030e-03
+            Eff_norm_1    1.3420e-03
+            Eff_norm_2    1.2670e-03
+            Eff_norm_3    1.5930e-03
+            Eff_norm_4    1.4460e-03
+            Eff_norm_5    1.6800e-03
+            Eff_norm_6    1.5390e-03
+            Eff_norm_7    1.9900e-03
+              N_peak_0    6.7609e-01
+              N_peak_1    1.4363e+00
+              N_peak_2    6.4936e-01
+              N_peak_3    1.2728e+00
+              N_peak_4    2.3705e+00
+              N_peak_5    2.8279e+00
+              N_peak_6    3.7000e+00
+              N_peak_7    6.7404e+00
+           N_semilep_0    1.8621e+00
+           N_semilep_1    5.5464e+00
+           N_semilep_2    2.5633e+00
+           N_semilep_3    5.9281e+00
+           N_semilep_4    7.2103e+00
+           N_semilep_5    9.4888e+00
+           N_semilep_6    1.2632e+01
+           N_semilep_7    2.4281e+01
+  bs_cbalpha_signalMc_0    1.0000e+00
+  bs_cbalpha_signalMc_1    1.0000e+00
+  bs_cbalpha_signalMc_2    1.0000e+00
+  bs_cbalpha_signalMc_3    1.0000e+00
+  bs_cbalpha_signalMc_4    1.0000e+00
+  bs_cbalpha_signalMc_5    1.0000e+00
+  bs_cbalpha_signalMc_6    1.0000e+00
+  bs_cbalpha_signalMc_7    1.0000e+00
+     bs_cbn_signalMc_0    1.0000e+00
+     bs_cbn_signalMc_1    1.0000e+00
+     bs_cbn_signalMc_2    1.0000e+00
+     bs_cbn_signalMc_3    1.0000e+00
+     bs_cbn_signalMc_4    1.0000e+00
+     bs_cbn_signalMc_5    1.0000e+00
+     bs_cbn_signalMc_6    1.0000e+00
+     bs_cbn_signalMc_7    1.0000e+00
+    bs_frac_signalMc_0    7.0000e-01
+    bs_frac_signalMc_1    7.0000e-01
+    bs_frac_signalMc_2    7.0000e-01
+    bs_frac_signalMc_3    7.0000e-01
+    bs_frac_signalMc_4    7.0000e-01
+    bs_frac_signalMc_5    7.0000e-01
+    bs_frac_signalMc_6    7.0000e-01
+    bs_frac_signalMc_7    7.0000e-01
+   bs_mean1_signalMc_0    5.3700e+00
+   bs_mean1_signalMc_1    5.3700e+00
+   bs_mean1_signalMc_2    5.3700e+00
+   bs_mean1_signalMc_3    5.3700e+00
+   bs_mean1_signalMc_4    5.3700e+00
+   bs_mean1_signalMc_5    5.3700e+00
+   bs_mean1_signalMc_6    5.3700e+00
+   bs_mean1_signalMc_7    5.3700e+00
+   bs_mean2_signalMc_0    5.3700e+00
+   bs_mean2_signalMc_1    5.3700e+00
+   bs_mean2_signalMc_2    5.3700e+00
+   bs_mean2_signalMc_3    5.3700e+00
+   bs_mean2_signalMc_4    5.3700e+00
+   bs_mean2_signalMc_5    5.3700e+00
+   bs_mean2_signalMc_6    5.3700e+00
+   bs_mean2_signalMc_7    5.3700e+00
+  bs_sigma1_signalMc_0    3.0000e-02
+  bs_sigma1_signalMc_1    3.0000e-02
+  bs_sigma1_signalMc_2    3.0000e-02
+  bs_sigma1_signalMc_3    3.0000e-02
+  bs_sigma1_signalMc_4    3.0000e-02
+  bs_sigma1_signalMc_5    3.0000e-02
+  bs_sigma1_signalMc_6    3.0000e-02
+  bs_sigma1_signalMc_7    3.0000e-02
+  bs_sigma2_signalMc_0    8.0000e-02
+  bs_sigma2_signalMc_1    8.0000e-02
+  bs_sigma2_signalMc_2    8.0000e-02
+  bs_sigma2_signalMc_3    8.0000e-02
+  bs_sigma2_signalMc_4    8.0000e-02
+  bs_sigma2_signalMc_5    8.0000e-02
+  bs_sigma2_signalMc_6    8.0000e-02
+  bs_sigma2_signalMc_7    8.0000e-02
+             comb_B1_0    5.0000e-01
+             comb_B1_1    5.0000e-01
+             comb_B1_2    5.0000e-01
+             comb_B1_3    5.0000e-01
+             comb_B1_4    5.0000e-01
+             comb_B1_5    5.0000e-01
+             comb_B1_6    5.0000e-01
+             comb_B1_7    5.0000e-01
+            fs_over_fu    2.5200e-01
+          n_sig_norm_0    2.9988e+05
+          n_sig_norm_1    4.3930e+05
+          n_sig_norm_2    3.7882e+05
+          n_sig_norm_3    4.7637e+05
+          n_sig_norm_4    1.0849e+06
+          n_sig_norm_5    1.2333e+06
+          n_sig_norm_6    1.7642e+06
+          n_sig_norm_7    2.0935e+06
+
+    Floating Parameter  InitialValue    FinalValue (+HiError,-LoError)    GblCorr.
+  --------------------  ------------  ----------------------------------  --------
+                 BF_bs    3.5700e-09    3.6135e-09 (+4.17e-10,-3.96e-10)  <none>
+              n_comb_0    4.4444e+00    7.9417e+00         +/-  3.52e+00  <none>
+              n_comb_1    8.8889e+00    2.6666e+01         +/-  6.19e+00  <none>
+              n_comb_2    0.0000e+00    0.0000e+00         +/-  0.00e+00  <none>
+              n_comb_3    4.4444e+00    2.3877e+01         +/-  5.74e+00  <none>
+              n_comb_4    4.4444e+00    4.4444e+01         +/-  2.89e+01  <none>
+              n_comb_5    2.2222e+00    2.2222e+01         +/-  1.14e+00  <none>
+              n_comb_6    1.3333e+01    3.7499e+01         +/-  7.99e+00  <none>
+              n_comb_7    3.3333e+01    1.2433e+02         +/-  1.31e+01  <none>
+
