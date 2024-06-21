@@ -7,7 +7,7 @@ namespace signal_pdf {
     void fill_dataset(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8){
 
         RooRealVar m("m","",4.9,5.9);
-        RooDataSet *rds = new RooDataSet("signal_rds","",RooArgSet(m));
+        RooDataSet *rds = new RooDataSet("rds","",RooArgSet(m));
 
         TFile *fin = new TFile("/eos/user/c/cmsdas/2024/long-ex-bph/bsmmMc.root");
         TTree *tin = (TTree*)fin->Get("bsmmMc");
@@ -37,7 +37,8 @@ namespace signal_pdf {
         cout << "Selection efficiency: " << eff << " +- " << eff_error << endl;
 
         wspace->import(m);
-        wspace->import(*rds);
+        wspace->import(*rds, Rename(Form("rds_signalMc_%d", cate)));
+        wspace->import(RooRealVar(Form("Eff_bs_%d",cate),"",eff));
 
         delete fin;
     }
@@ -45,7 +46,7 @@ namespace signal_pdf {
     void fit(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8){
 
         RooRealVar m = *(RooRealVar*)wspace->var("m");
-        RooDataSet *rds = (RooDataSet*)wspace->data("signal_rds");
+        RooDataSet *rds = (RooDataSet*)wspace->data(Form("rds_signalMc_%d", cate));
 
         RooRealVar bs_mean1("bs_mean1","",5.37,5.2,5.5);
         RooRealVar bs_mean2("bs_mean2","",5.37,5.2,5.5);
@@ -56,19 +57,18 @@ namespace signal_pdf {
         RooRealVar bs_frac("bs_frac","",0.7,0.,1.);
         RooGaussian bs_gaus("bs_gaus", "", m, bs_mean1, bs_sigma1);
         RooCBShape bs_cbline("bs_cbline", "", m, bs_mean2, bs_sigma2, bs_cbalpha, bs_cbn);
-        RooAddPdf pdf("signal_pdf", "", RooArgList(bs_gaus, bs_cbline), RooArgList(bs_frac));
+        RooAddPdf pdf("pdf", "", RooArgList(bs_gaus, bs_cbline), RooArgList(bs_frac));
 
         pdf.fitTo(*rds);
 
-        // wspace->import(RooArgList(bs_mean1, bs_mean2, bs_sigma1, bs_sigma2, bs_cbalpha, bs_cbn, bs_frac));
-        wspace->import(pdf);
+        wspace->import(pdf, RenameAllNodes(Form("signalMc_%d", cate)), RenameAllVariablesExcept(Form("signalMc_%d", cate), "m"));
     }
 
     void draw(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0){
 
-        RooDataSet *rds = (RooDataSet*)wspace->data("signal_rds");
+        RooDataSet *rds = (RooDataSet*)wspace->data(Form("rds_signalMc_%d", cate));
         RooRealVar m = *(RooRealVar*)wspace->var("m");
-        RooAddPdf pdf = *(RooAddPdf*)wspace->pdf("signal_pdf");
+        RooAddPdf pdf = *(RooAddPdf*)wspace->pdf(Form("pdf_signalMc_%d", cate));
 
         RooPlot *frame = m.frame(Title(" "),Bins(100));
         rds->plotOn(frame, Name("t_rds"));
@@ -112,9 +112,14 @@ void task_4_3(unsigned int cate=0, double bdt_min=0.8) {
 
     RooWorkspace* wspace = new RooWorkspace("wspace","wspace");
 
-    signal_pdf::fill_dataset(wspace, cate, bdt_min);
-    signal_pdf::fit(wspace, cate, bdt_min);
-    signal_pdf::draw(wspace, cate, bdt_min);
+    gROOT->SetBatch(kTRUE);
+
+    for(int i = 0; i < 2; i++){
+        signal_pdf::fill_dataset(wspace, i, bdt_min);
+        signal_pdf::fit(wspace, i, bdt_min);
+        signal_pdf::draw(wspace, i, bdt_min);
+    }
+
 
     // save workspace, including dataset, 
     string wp_name = "wspace_signal_" + to_string(cate) + ".root";

@@ -36,7 +36,7 @@ void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
     // build_pdf_peak(wspace, cate, bdt_min);
     build_pdf_semi(wspace, cate, bdt_min);
     build_pdf_signal(wspace, cate, bdt_min);
-    build_pdf_norm(wspace, cate, bdt_min);
+    // build_pdf_norm(wspace, cate, bdt_min);
 
     // save workspace
     wspace->writeToFile("task_4_5.root");

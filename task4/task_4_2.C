@@ -28,8 +28,8 @@ namespace semilep_bkg_pdf {
         yield_err.push_back(effyield[cate][dN_bupimumuMcBg]);
 
         RooRealVar m("m","",4.9,5.9);
-        RooRealVar wgt("wgt","",1.,0.,1000.);
-        RooDataSet *rds = new RooDataSet("semilep_bkg_rds","",RooArgSet(m,wgt),"wgt");
+        RooRealVar wgt(Form("wgt_semilepBkg_%d", cate),"",1.,0.,1000.);
+        RooDataSet *rds = new RooDataSet("rds","",RooArgSet(m,wgt), "wgt");
 
         double sum_weight = 0.;
         double sum_weight_err = 0.;
@@ -79,27 +79,29 @@ namespace semilep_bkg_pdf {
         cout << "Sum of weights: " << sum_weight << " +- " << sum_weight_err << endl;
 
         wspace->import(m);
-        wspace->import(*rds);
+        wspace->import(*rds, Rename(Form("rds_semilepBkg_%d", cate)));
+        // wspace->import(wgt, RenameVariable("wgt", Form("wgt_semilepBkg_%d", cate)));
+        wspace->import(RooRealVar(Form("N_semilep_%d",cate),"",sum_weight), RenameAllNodes(Form("semilepBkg_%d", cate)));
     }
 
     void fit(RooWorkspace* wspace, unsigned int cate = 0, double bdt_min = 0.8){
 
-        RooDataSet *rds = (RooDataSet*)wspace->data("semilep_bkg_rds");
+        RooDataSet *rds = (RooDataSet*)wspace->data(Form("rds_semilepBkg_%d", cate));
         RooRealVar m = *(RooRealVar*)wspace->var("m");
 
-        RooNDKeysPdf pdf("semilep_bkg_pdf", "", m, *rds, "ma", 2);
+        RooNDKeysPdf pdf("pdf", "", m, *rds, "ma", 2);
 
         // pdf.fitTo(*rds, SumW2Error(true));
 
-        wspace->import(pdf);
+        wspace->import(pdf, RenameAllNodes(Form("semilepBkg_%d", cate)), RenameAllVariablesExcept(Form("semilepBkg_%d", cate), "m"));
     }
 
     void draw(RooWorkspace* wspace, unsigned int cate = 0, double bdt_min = 0.8){
 
         // reload workspace
-        RooDataSet *rds = (RooDataSet*)wspace->data("semilep_bkg_rds");
+        RooDataSet *rds = (RooDataSet*)wspace->data(Form("rds_semilepBkg_%d", cate));
         RooRealVar m = *(RooRealVar*)wspace->var("m");
-        RooNDKeysPdf pdf = *(RooNDKeysPdf*)wspace->pdf("semilep_bkg_pdf");
+        RooNDKeysPdf pdf = *(RooNDKeysPdf*)wspace->pdf(Form("pdf_semilepBkg_%d", cate));
 
         RooPlot *frame = m.frame(Title(" "), Bins(70));
         rds->plotOn(frame, Name("t_rds"), MarkerSize(0.8));

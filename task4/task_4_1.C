@@ -28,7 +28,7 @@ namespace peaking_bkg_pdf {
 
         RooRealVar m("m","",4.9,5.9);
         RooRealVar wgt("wgt","",1.,0.,1000.);
-        RooDataSet *rds = new RooDataSet("peaking_bkg_rds","",RooArgSet(m,wgt),"wgt");
+        RooDataSet *rds = new RooDataSet("rds","",RooArgSet(m,wgt),"wgt");
 
         double sum_weight = 0.;
         double sum_weight_err = 0.;
@@ -49,9 +49,9 @@ namespace peaking_bkg_pdf {
 
             unsigned int cate_t;
             float m_t,bdt_t;
-            tin->SetBranchAddress("cate",&cate_t);
-            tin->SetBranchAddress("m",&m_t);
-            tin->SetBranchAddress("bdt",&bdt_t);
+            tin->SetBranchAddress("cate", &cate_t);
+            tin->SetBranchAddress("m", &m_t);
+            tin->SetBranchAddress("bdt", &bdt_t);
 
             double weight = yield[proc]/(double)tin->GetEntries(Form("cate==%d",cate));
             double weight_err = yield_err[proc]/(double)tin->GetEntries(Form("cate==%d",cate))/weight_max;
@@ -78,30 +78,31 @@ namespace peaking_bkg_pdf {
         cout << "Sum of weights: " << sum_weight << " +- " << sum_weight_err << endl;
 
         wspace->import(m);
-        wspace->import(*rds);
+        wspace->import(*rds, Rename(Form("rds_peakingBkg_%d", cate)));
+        // wspace->import(wgt, RenameVariable("wgt", Form("wgt_peakingBkg_%d", cate)));
+        wspace->import(RooRealVar(Form("N_peak_%d",cate),"",sum_weight));
+        
     }
 
     void fit(RooWorkspace* wspace, unsigned int cate = 0, double bdt_min = 0.8){
 
-        RooDataSet *rds = (RooDataSet*)wspace->data("peaking_bkg_rds");
+        RooDataSet *rds = (RooDataSet*)wspace->data(Form("rds_peakingBkg_%d", cate));
         RooRealVar m = *(RooRealVar*)wspace->var("m");
 
-        RooNDKeysPdf pdf("peaking_bkg_pdf", "", m, *rds,  "a");
-
+        RooNDKeysPdf pdf("pdf", "", m, *rds,  "a");
 
         //pdf.fitTo(*rds, Save(true), SumW2Error(true));
 
-
         // wspace->import(res);
-        wspace->import(pdf);
+        wspace->import(pdf, RenameAllNodes(Form("peakingBkg_%d", cate)), RenameAllVariablesExcept(Form("peakingBkg_%d", cate), "m"));
     }
 
     void draw(RooWorkspace* wspace, unsigned int cate = 0, double bdt_min = 0.8){
 
         // reload workspace
-        RooDataSet *rds = (RooDataSet*)wspace->data("peaking_bkg_rds");
+        RooDataSet *rds = (RooDataSet*)wspace->data(Form("rds_peakingBkg_%d", cate));
         RooRealVar m = *(RooRealVar*)wspace->var("m");
-        RooNDKeysPdf pdf = *(RooNDKeysPdf*)wspace->pdf("peaking_bkg_pdf");
+        RooNDKeysPdf pdf = *(RooNDKeysPdf*)wspace->pdf(Form("pdf_peakingBkg_%d", cate));
 
         RooPlot *frame = m.frame(Title(" "), Bins(70));
         rds->plotOn(frame, Name("t_rds"), MarkerSize(0.8));
