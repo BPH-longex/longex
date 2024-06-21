@@ -7,15 +7,23 @@ import hist
 from cycler import cycler
 
 
-filename = "task2/jpsik.root"
+filename = "task2/norm_wspace.root"
 workspace_name = "wspace"
 dataset_name = "rds_data"
+#dataset_name = "rds_mc"
+
+cms_label="$B^{+} \\to J/\Psi K^{+}$ (MC)"
 
 #! THE TOTAL MUST BE THE FIRST
-pdf_names = ["model","pdf_comb", "sig_g1", "sig_g2", "pdf_sig", "pdf_jpsix"]
-labels = ["Total", "Combinatorial", "Gauss1", "Gauss2", "GaussSum", "ErrorFunc"]
-hist_range = (5, 5.8)
+pdf_names = ["model","pdf_comb", "pdf_sig", "pdf_jpsix"]
+labels = ["Total", "Combinatorial", "CrystalBall", "ErrorFunc"]
+#pdf_names = ["pdf_sigmc"]
+#labels = ["CrystalBall"]
 
+hist_range = (5, 5.8)
+weight="wgt"
+#weight=None
+what="pulls"
 
 #filename="task2/norm_wspace.root"
 #pdf_names=[""]
@@ -84,7 +92,11 @@ np_data = data.to_numpy()
 
 x = np.linspace(*hist_range, x_sampling)
 h = hist.Hist(hist.axis.Regular(bins, *hist_range), storage=hist.storage.Weight())
-h.fill(np_data["m"], weight=np_data["wgt"])
+
+weight_arr=np.ones_like(np_data["m"])
+if weight:
+    weight_arr=np_data[weight]
+h.fill(np_data["m"], weight=weight_arr)
 
 fig, ax = plt.subplots(2, 1, gridspec_kw={"height_ratios": [3, 1]}, sharex=True)
 plt.subplots_adjust(hspace=0)
@@ -107,11 +119,22 @@ for pdf_name, label in zip(pdf_names, labels):
 
 ax[0].set_xlim(*hist_range)
 residuals = h.values() - pdf(h.axes[0].centers, frames[0], data, models[0])
-ax[1].errorbar(h.axes[0].centers, residuals, fmt="o", yerr=np.sqrt(h.variances()))
+pulls = residuals / np.sqrt(h.variances())
+
+if what=="residuals":
+    to_plot=residuals
+    to_plot_err=np.sqrt(h.variances())
+    lab="Residuals"
+elif what=="pulls":
+    to_plot=pulls
+    to_plot_err=np.ones_like(pulls)
+    lab="Pulls"
+ax[1].errorbar(h.axes[0].centers, to_plot, fmt="o", yerr=to_plot_err)
 ax[1].axhline(0, color="red", linestyle="--")
 ax[1].set_xlim(*hist_range)
+ax[1].set_ylabel(lab)
 
-hep.cms.text("Private Work", ax=ax[0])
+hep.cms.text(cms_label, ax=ax[0])
 hep.cms.lumitext("13 TeV", ax=ax[0])
 
 ax[0].set_ylabel("Events")
