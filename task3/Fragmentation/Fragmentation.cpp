@@ -2,7 +2,7 @@
 #include "def_variables.h"
 #include "FitJpsiK.h"
 #include "FitJpsiPhi.h"
-//#include "ComputeFragmFrac.h"
+#include "ComputeFragmFrac.h"
 
 void Fragmentation(){
 
@@ -106,10 +106,6 @@ TCanvas *c_fixedEta_Effi_K = new TCanvas();
 hEffi_K_fixedEta->Draw("ep");
 c_fixedEta_Effi_K->SaveAs("Effi_fixedEta_K.png");
 
-ComputeFragmFrac(hEffi_K_fixedEta, hYield_K_fixedEta, false);
-ComputeFragmFrac(hEffi_phi_fixedEta, hYield_phi_fixedEta, false);
-
-
-
-
+ComputeFragmFrac(hEffi_K_fixedEta , hEffi_phi_fixedEta, hYield_K_fixedEta, hYield_phi_fixedEta, false); // effiK, effiPhi, YieldK, YieldPhi, 
+//ComputeFragmFrac(hEffi_phi_fixedEta, hYield_phi_fixedEta, false);
 }

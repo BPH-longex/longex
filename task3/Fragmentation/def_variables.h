@@ -17,6 +17,10 @@ TH1D *hFrag_s_fixedPt = new TH1D("hFrag_s_fixedPt", "hFrag_s_fixedPt", number_Bi
 TH1D *hFrag_u_fixedEta = new TH1D("hFrag_u_fixedEta", "hFrag_u_fixedEta", number_BinPt, 0, number_BinPt);
 TH1D *hFrag_u_fixedPt = new TH1D("hFrag_u_fixedPt", "hFrag_u_fixedPt", number_BinEta, 0, number_BinEta);
 
+TH1F *fragm_ratio;
+TH1F *fs;
+TH1F *fu;
+
 
 double ptBin[number_BinPt] = {10,12,14,16,18,20,24,30,40,60,120,400};
 double etaBin[number_BinEta] = {0.001,0.2,0.4,0.8,1.2,2.5};
