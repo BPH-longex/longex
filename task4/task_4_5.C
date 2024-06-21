@@ -3,6 +3,19 @@
 #include "task_4_3.c"
 #include "task_4_4.C"
 
+#define N_CATE 8
+
+const double bdt_cut[] = {
+   0.993425,
+   0.991260,
+   0.995055,
+   0.993425,
+   0.997204,
+   0.997898,
+   0.997204,
+   0.996281
+};
+
 using namespace RooFit;
 
 void build_pdf_peak(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8){
@@ -21,9 +34,9 @@ void build_pdf_signal(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8)
 }
 
 void build_pdf_norm(RooWorkspace* wspace, uint cate = 0){
-    norm_pdf::fill_dataset_data(wspace, cate, bdt_min);
-    norm_pdf::fill_dataset_mc(wspace, cate, bdt_min);
-    norm_pdf::fit(wspace, cate, bdt_min);
+    norm_pdf::fill_dataset_data(wspace, cate);
+    norm_pdf::fill_dataset_mc(wspace, cate);
+    norm_pdf::fit(wspace, cate);
 }
 
 void build_pdf_comb(RooWorkspace *wspace, int cate, double bdt_min)
@@ -45,18 +58,21 @@ void build_pdf_comb(RooWorkspace *wspace, int cate, double bdt_min)
     wspace->import(RooRealVar(Form("n_comb_%d",cate),"",n_comb_guess,0.,n_comb_guess*10.));
 }
 
-void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
+//void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
+void task_4_5(){
 
     RooWorkspace* wspace = new RooWorkspace("wspace","wspace");
 
     // set batch mode
     gROOT->SetBatch(kTRUE);
-
-    // build_pdf_peak(wspace, cate, bdt_min);
-    build_pdf_semi(wspace, cate, bdt_min);
-    build_pdf_signal(wspace, cate, bdt_min);
-    build_pdf_norm(wspace, cate, bdt_min);
-    build_pdf_comb(wspace, cate, bdt_min);
+    
+    for(int cate=0; cate<N_CATE; cate++) {
+        build_pdf_peak(wspace, cate, bdt_cut[cate]);
+        build_pdf_semi(wspace, cate, bdt_cut[cate]);
+        build_pdf_signal(wspace, cate, bdt_cut[cate]);
+        build_pdf_norm(wspace, cate);
+        build_pdf_comb(wspace, cate, bdt_cut[cate]);
+    }
 
     // save workspace
     wspace->writeToFile("task_4_5.root");
