@@ -1,7 +1,7 @@
 #include "task_4_1.C"
 #include "task_4_2.C"
 #include "task_4_3.c"
-// -> TODO <- TASK 4.4
+#include "task_4_4.C"
 
 using namespace RooFit;
 
@@ -20,6 +20,12 @@ void build_pdf_signal(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8)
     signal_pdf::fit(wspace, cate, bdt_min);
 }
 
+void build_pdf_norm(RooWorkspace* wspace, uint cate = 0, double bdt_min = 0.8){
+    norm_pdf::fill_dataset_data(wspace, cate, bdt_min);
+    norm_pdf::fill_dataset_mc(wspace, cate, bdt_min);
+    norm_pdf::fit(wspace, cate, bdt_min);
+}
+
 void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
 
     RooWorkspace* wspace = new RooWorkspace("wspace","wspace");
@@ -30,7 +36,7 @@ void task_4_5(unsigned int cate=0, double bdt_min = 0.8){
     // build_pdf_peak(wspace, cate, bdt_min);
     build_pdf_semi(wspace, cate, bdt_min);
     build_pdf_signal(wspace, cate, bdt_min);
-    /* -> TODO <- INSERT NORMALIZATION FIT HERE */
+    build_pdf_norm(wspace, cate, bdt_min);
 
     // save workspace
     wspace->writeToFile("task_4_5.root");
