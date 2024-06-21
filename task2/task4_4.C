@@ -90,7 +90,7 @@ namespace norm_pdf {
         RooRealVar sig_frac("sig_frac","",0.9,0.5,1.0);
         RooGaussian sigmc_g1("sigmc_g1","",m,sigmc_mean1,sigmc_sigma1);
         RooGaussian sigmc_g2("sigmc_g2","",m,sigmc_mean2,sigmc_sigma2);
-        RooAddPdf pdf_sigmc("pdf_sig","",RooArgList(sigmc_g1,sigmc_g2),RooArgList(sig_frac));
+        RooAddPdf pdf_sigmc("pdf_sigmc","",RooArgList(sigmc_g1,sigmc_g2),RooArgList(sig_frac));
         pdf_sigmc.fitTo(*rds_mc);
 
         wspace->import(pdf_sigmc);
@@ -121,9 +121,7 @@ namespace norm_pdf {
         RooAddPdf model("model", "", RooArgList(pdf_sig, pdf_comb, pdf_jpsix), RooArgList(n_sig, n_comb, n_jpsix));
 
         model.fitTo(*rds_data, Extended(true), SumW2Error(true));
-
-        wspace->import(*rds_data);
-        wspace->import(model);
+/*
         wspace->import(comb_coeff);
         wspace->import(pdf_comb);
         wspace->import(sig_g1);
@@ -134,6 +132,8 @@ namespace norm_pdf {
         wspace->import(n_jpsix);
         wspace->import(n_comb);
         wspace->import(n_sig);
+*/        
+        wspace->import(model);
     }
 }
 
@@ -145,8 +145,7 @@ void task4_4(unsigned int cate=0, double bdt_min=0.8) {
         norm_pdf::fit(wspace, cate, bdt_min);
 
         // save workspace, including dataset,
-        string wp_name = "wspace_signal_" + to_string(cate) + ".root";
-        TFile *fout = new TFile("norm_wspace", "RECREATE");
+        TFile *fout = new TFile("norm_wspace.root", "RECREATE");
         wspace->Write();
         fout->Close();
     } 
