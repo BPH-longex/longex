@@ -4,11 +4,11 @@ using namespace RooFit;
 
 namespace norm_pdf {
 
-    void fill_dataset_data(RooWorkspace* wspace, unsigned int cate=0, double bdt_min = 0.8) {
+    void fill_dataset_data(RooWorkspace* wspace, unsigned int cate=0) {
         RooRealVar m("m", "", 5.0, 5.8);
         RooRealVar wgt("wgt", "", 1., 0., 1000.);
 
-        RooDataSet *rds_data = new RooDataSet("rds_data", "", RooArgSet(m,wgt), "wgt");
+        RooDataSet *rds_data = new RooDataSet("rds_data", "", RooArgSet(m, wgt), "wgt");
 
         TFile *fin = new TFile("/eos/user/c/cmsdas/2024/long-ex-bph/bupsikData.root");
         TTree *tin = (TTree*)fin->Get("bupsikData");
@@ -25,7 +25,7 @@ namespace norm_pdf {
             if (m_t<5.0 || m_t>=5.8) continue;
             m.setVal(m_t);
             wgt.setVal(wgt_t);
-            rds_data->add(RooArgSet(m,wgt),wgt_t);
+            rds_data->add(RooArgSet(m, wgt),wgt_t);
         }
 
         wspace->import(m);
@@ -33,11 +33,10 @@ namespace norm_pdf {
         wspace->import(*rds_data);
 
         delete fin;
-
     }
 
 
-    void fill_dataset_mc(RooWorkspace* wspace, unsigned int cate=0, double bdt_min = 0.8) {
+    void fill_dataset_mc(RooWorkspace* wspace, unsigned int cate=0) {
         RooRealVar m("m", "", 5.0, 5.8);
         RooDataSet *rds_mc = new RooDataSet("rds_mc", "", RooArgSet(m));
 
@@ -65,7 +64,6 @@ namespace norm_pdf {
 	    RooRealVar eff_err("eff", "", eff_err_d);
 
         cout << "Category: " << cate << endl;
-        cout << "BDT min: " << bdt_min << endl;
         cout << "Selection efficiency: " << eff_d << " +- " << eff_err_d << endl;
 
         wspace->import(m);
@@ -76,22 +74,12 @@ namespace norm_pdf {
         delete fin;
     }
 
-    void fit(RooWorkspace* wspace, unsigned int cate = 0, double bdt_min = 0.8){
+    void fit(RooWorkspace* wspace, unsigned int cate = 0){
         RooRealVar m = *(RooRealVar*)wspace->var("m");
         RooRealVar wgt = *(RooRealVar*)wspace->var("wgt");
 
         RooDataSet *rds_mc = (RooDataSet*)wspace->data("rds_mc");
         RooDataSet *rds_data = (RooDataSet*)wspace->data("rds_data");
-
-        /*
-        mean = RooRealVar("sig_mean", "", 5.28, 5.2, 5.4)
-        sigma = RooRealVar("sig_sigma", "width", 0.030, 0.005, 0.060)
-        alpha1 = RooRealVar("alpha1", "alpha1", 1.5, 0.1, 10)
-        n1 = RooRealVar("n1", "n1", 2, 0.1, 10)
-        alpha2 = RooRealVar("alpha2", "alpha2", 1.5, 0.1, 10)
-        n2 = RooRealVar("n2", "n2", 2, 0.1, 10)
-        pdf_sig = RooCrystalBall("pdf_sig", "", m, mean, sigma, alpha1, n1, alpha2, n2)
-         * */
 
         RooRealVar sigmc_mean("sigmc_mean", "sigmc_mean", 5.28, 5.2, 5.4);
         RooRealVar sigmc_sigma("sigmc_sigma", "sigmc_width", 0.030, 0.005, 0.060);
@@ -101,19 +89,19 @@ namespace norm_pdf {
         RooRealVar sigmc_n2("sigmc_n2", "sigmc_n2", 2, 0.1, 10);
         RooCrystalBall pdf_sigmc("pdf_sigmc", "", m, sigmc_mean, sigmc_sigma, sigmc_alpha1, sigmc_n1, sigmc_alpha2, sigmc_n2);
 
-        /*RooRealVar sigmc_mean1("sigmc_mean1","",5.28,5.2,5.4);
+/*      RooRealVar sigmc_mean1("sigmc_mean1","",5.28,5.2,5.4);
         RooRealVar sigmc_mean2("sigmc_mean2","",5.28,5.2,5.4);
         RooRealVar sigmc_sigma1("sigmc_sigma1","",0.030,0.005,0.060);
         RooRealVar sigmc_sigma2("sigmc_sigma2","",0.080,0.040,0.200);
         RooRealVar sig_frac("sig_frac","",0.9,0.5,1.0);
         RooGaussian sigmc_g1("sigmc_g1","",m,sigmc_mean1,sigmc_sigma1);
         RooGaussian sigmc_g2("sigmc_g2","",m,sigmc_mean2,sigmc_sigma2);
-        RooAddPdf pdf_sigmc("pdf_sigmc","",RooArgList(sigmc_g1,sigmc_g2),RooArgList(sig_frac));*/
+        RooAddPdf pdf_sigmc("pdf_sigmc","",RooArgList(sigmc_g2,sigmc_g2),RooArgList(sig_frac));
+*/
 
         pdf_sigmc.fitTo(*rds_mc);
 
         wspace->import(pdf_sigmc);
-
 
         RooRealVar sig_shift("sig_shift","",0.,-0.02,0.02);
         RooRealVar sig_scale("sig_scale","",1.,0.8,1.2);
@@ -166,11 +154,11 @@ namespace norm_pdf {
     }
 }
 
-void task4_4(unsigned int cate=0, double bdt_min=0.8) {
+void task4_4(unsigned int cate=0) {
         RooWorkspace* wspace = new RooWorkspace("wspace", "wspace");
 
-        norm_pdf::fill_dataset_data(wspace, cate, bdt_min);
-        norm_pdf::fill_dataset_mc(wspace, cate, bdt_min);
+        norm_pdf::fill_dataset_data(wspace, cate);
+        norm_pdf::fill_dataset_mc(wspace, cate);
         norm_pdf::fit(wspace, cate, bdt_min);
 
         // save workspace, including dataset,
