@@ -1,5 +1,5 @@
-const int number_BinPt=12;
-const int number_BinEta = 9;
+const int number_BinPt=11;
+const int number_BinEta = 7;
 
 TH1D *hEffi_K_fixedEta = new TH1D("hEffi_K","hEffi_K", number_BinPt, 0, number_BinPt);
 TH1D *hEffi_phi_fixedEta = new TH1D("hEffi_K","hEffi_K", number_BinPt, 0, number_BinPt);
@@ -22,5 +22,5 @@ TH1F *fs;
 TH1F *fu;
 
 
-double ptBin[number_BinPt] = {10,12,14,16,18,20,24,30,40,60,120,400};
-double etaBin[number_BinEta] = {0.001,0.2,0.4,0.8,1.2,2.5};
+double ptBin[number_BinPt] = {10,12,14,16,18,20,24,30,40,60,120};
+double etaBin[number_BinEta] = {0.,0.2,0.4,0.8,1.2,2.5,4};

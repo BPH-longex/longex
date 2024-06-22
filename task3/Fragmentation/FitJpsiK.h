@@ -1,7 +1,8 @@
 void FitJpsiK(double ptMin, double ptMax, double etaMin, double etaMax, Int_t bin, Bool_t fixedPt){
 
     using namespace RooFit;
-
+    double m_min = 5.1;
+    double m_max = 5.8;
     uint cate = 2;   
     RooRealVar m("m","",5.0,5.8);
     RooRealVar wgt("wgt","",1.,0.,1000.);
@@ -21,13 +22,15 @@ void FitJpsiK(double ptMin, double ptMax, double etaMin, double etaMax, Int_t bi
     
     for(int evt=0; evt<tin->GetEntries(); evt++) {
         tin->GetEntry(evt);
-        if (cate_t!=cate) continue;
-        if (m_t<5.0 || m_t>=5.8) continue;
+       // if (cate_t == 6 || cate_t == 7) {
+
+        if (m_t<m_min || m_t>=m_max) continue;
         if (pt_t<ptMin || pt_t>=ptMax) continue;
         if (fabs(eta_t)<etaMin || fabs(eta_t)>=etaMax) continue;
         m.setVal(m_t);
         wgt.setVal(wgt_t);
         rds_data->add(RooArgSet(m,wgt),wgt_t);
+      //  }
     }
     delete fin;
     
@@ -42,14 +45,16 @@ void FitJpsiK(double ptMin, double ptMax, double etaMin, double etaMax, Int_t bi
     int evtcount[2] = {0,0};
     for(int evt=0; evt<tin->GetEntries(); evt++) {
         tin->GetEntry(evt);
-        if (cate_t!=cate) continue;
+       // if (cate_t == 6 || cate_t ==7){
+
         evtcount[0]++;
-        if (m_t<5.0 || m_t>=5.8) continue;
+        if (m_t<m_min || m_t>=m_max) continue;
         if (pt_t<ptMin || pt_t>=ptMax) continue;
         if (fabs(eta_t)<etaMin || fabs(eta_t)>=etaMax) continue;
         evtcount[1]++;
         m.setVal(m_t);
         rds_mc->add(RooArgSet(m));
+    //    }
     }
     double eff = (double)evtcount[1]/(double)evtcount[0];
     double eff_error = sqrt(eff*(1.-eff)/(double)evtcount[0]);

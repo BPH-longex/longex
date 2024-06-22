@@ -6,17 +6,21 @@
 
 void Fragmentation(){
 
+/*
 for(int i=0; i<(number_BinPt-1); i++){
     FitJpsiPhi(ptBin[i], ptBin[i+1], 0, 2.5, i,false);
     FitJpsiK(ptBin[i], ptBin[i+1], 0, 2.5, i, false);
 }
-
-/*
-for(int i=0; i<(number_BinEta-1); i++){
-    FitJpsiPhi(20,120, etaBin[i], etaBin[i+1], i, true);
-   FitJpsiK(20,120, etaBin[i], etaBin[i+1], i, true);
-}
 */
+
+
+
+for(int i=0; i<(number_BinEta-1); i++){
+   FitJpsiPhi(10,400, etaBin[i], etaBin[i+1], i, true);
+   FitJpsiK(10,400, etaBin[i], etaBin[i+1], i, true);
+}
+
+
 
 
 
@@ -106,6 +110,19 @@ TCanvas *c_fixedEta_Effi_K = new TCanvas();
 hEffi_K_fixedEta->Draw("ep");
 c_fixedEta_Effi_K->SaveAs("Effi_fixedEta_K.png");
 
-ComputeFragmFrac(hEffi_K_fixedEta , hEffi_phi_fixedEta, hYield_K_fixedEta, hYield_phi_fixedEta, false); // effiK, effiPhi, YieldK, YieldPhi, 
-//ComputeFragmFrac(hEffi_phi_fixedEta, hYield_phi_fixedEta, false);
+//ComputeFragmFrac(hEffi_K_fixedEta , hEffi_phi_fixedEta, hYield_K_fixedEta, hYield_phi_fixedEta, false); // effiK, effiPhi, YieldK, YieldPhi, 
+ComputeFragmFrac(hEffi_phi_fixedPt, hEffi_phi_fixedPt, hYield_K_fixedPt, hYield_phi_fixedPt,true);
+
+TFile *f_output = new TFile("output2_eta.root", "recreate");
+fragm_ratio->Write();
+fs->Write();
+fu->Write();
+hYield_K_fixedEta->Write();
+hYield_phi_fixedEta->Write();
+hEffi_K_fixedEta->Write();
+hEffi_phi_fixedEta->Write();
+f_output->Close();
+gROOT->ProcessLine(".q");
+
+
 }
